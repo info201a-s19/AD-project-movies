@@ -1,11 +1,11 @@
 # Final Project
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
-# Domain of Interest
+## Domain of Interest
 
 **Why are you interested in this field/domain?**
 
-Our synergy in our initial group discussions brought us to a shared interest in movies and its associated logistics. Thus, we decided to explore datasets regarding Movies. Jody enjoys comedies. Lynette and Jeffrey splurges on action movies, especially the Avengers. Zhi appreciates romance. There is more than beneath the eye of watching paying for a movie stub at the theater as there are movie pre-release and post-release components. Some, not limited to, pre-release factors consist of budgeting, timeline, and production planning that enhances the quality and enjoyability of the movie. Meanwhile a few post-factors incorporate ratings, price, marketing, and theater distribution networks, all of which aims to drive long-term profitability and to attract audiences upon release. Our group is motivated to conduct movie analysis and statistics such as calculating maximum and minimum revenues, obtaining names of most and least profitable movies or genres, computing the number of tickets sold per movie, grouping movies by budgeting bins, and timing the production process of the movie.
+Our synergy in our introductory group discussions brought us to a shared interest in movies and their back-end processes and facts. Thus, we decided to explore datasets regarding Movies. Jody enjoys comedies. Lynette and Jeffrey revel in action movies, especially MCU's Avengers. All in the while, Zhi appreciates romance. There is more than beneath the eye of paying for a movie stub at the theater as there are many components before and after movie releases. Some pre-release factors consisting of budgeting, timeline, and production planning enhance the quality and enjoyability of the movie. Meanwhile, a few post-factors incorporate ratings, price, marketing, and theater distribution network - all of which aim to drive long-term profitability and to attract a global audience. We are motivated to analyze movie trends, statistics, and logistics such as calculating maximum and minimum revenues, obtaining names of most and least profitable movies or genres, computing the number of tickets sold per movie, and grouping movies based on ranges of budgets.
 
 **What other examples of data driven project have you found related to this domain (share at least 3)?**
 
@@ -13,20 +13,26 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 
 - [Exploring Movie Data with Interactive Visualizations](https://medium.com/datadriveninvestor/data-science-analysis-of-movies-released-in-the-cinema-between-2000-and-2017-b2d9e515d032) utilizes The Movie Database (TMDB) data from 1910-2016. Their goal for the project was to understand temporal patterns affecting movie profitability, changes in popular genres, identifying important actors/directors, and observing changes in movie ratings and vote averages over time.
 
-- [Lorenz Hering’s Movie Data Analysis project](https://www.kaggle.com/lorenzhering/movie-data-analysis) utilizes TMDb's data set that contains information about 10,866 movies published between 1960 and 2015. His goal was to answer the questions of which genres were most common, have the highest avg. budget/revenue/profit/vote/popularity/vote count, number of movies with voting avg. >=8, and analyzing the development means of variables per genre over the years. 
+- [Lorenz Hering’s Movie Data Analysis project](https://www.kaggle.com/lorenzhering/movie-data-analysis) utilizes TMDb's data set that contains information about 10,866 movies published between 1960 and 2015. His goal was to answer the questions of which genres were most common, have the highest avg. budget/revenue/profit/vote/popularity/vote count, number of movies with voting avg. >=8, and analyzing the development means of variables per genre over the years.
 
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
 - What is the most profitable movie up from movies between 2000 and 2017?
-- How long did it take to produce the movies from the dataset?
-- How many number of tickets were sold per movie?
+This can be investigated this by filtering datasets by movies from 2000 and 2017, arranging a newly created profit column from high amount to low amount, and viewing the top ten movies with the highest grossed (revenue - budget) amount.  
+
+- Does budgeting affect movie popularity and/or profitability?
+This can be effectively analyzed by drawing faceted scatter plots with the budgeting columns and the popularity (revenue/profit as well) columns and observing trends and correlations.
+
 - What was the most popular movie?
+This can be measured by highest revenue and highest popularity obtained by our datasets. In addition, movie datasets have files that contain movie ratings that we can use to compare and supplement our findings.
+
 - What were the top 3 genres of movies?
+This criteria can be evaluated by grouping movies based on categories/genre and then determining based on computations of highest budget, highest revenue, highest popularity, and highest ratings - all of which signal level of demand for the movie genres.
 
 # Finding Data
 
-# Source 1
+## Source 1
 
 **Where did you download the data (e.g., a web URL)?**
 
@@ -34,9 +40,7 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-- This dataset was directly found on Kaggle by Rounak Banik who was interested in performing analysis and storytelling about the movies and its components. From that, he built a revenue forecasting model, determined success metrics, and crafted a recommender system for movies. The data source originates from an ensemble of data collected from TMDB and GroupLens. The Movie Details, Credits and Keywords have been collected from the TMDB Open API. Their API provides additional information on other movies, actors and actresses, crew members, and TV shows.
-
-- Movies_metadata.csv: The main Movies Metadata file. Contains information on 45,000 movies featured in the Full MovieLens dataset. Features include posters, backdrops, budget, revenue, release dates, languages, production countries and companies.
+- This dataset was directly found on Kaggle by Rounak Banik who was interested in performing analysis and storytelling about the movies and its components. From that, he built a revenue forecasting model, determined success metrics, and crafted a recommender system for movies. The data source originates from an ensemble of data collected from TMDB and GroupLens. The Movie Details, Credits and Keywords have been collected from the TMDB Open API. Their API provides additional information on other movies, actors and actresses, crew members, and TV shows. The main Movies Metadata file. Contains information on 45,000 movies featured in the Full MovieLens dataset. Features include posters, backdrops, budget, revenue, release dates, languages, production countries and companies.
 
 **How many observations (rows) are in your data?**
 
@@ -49,12 +53,12 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 **What questions (from above) can be answered using the data in this dataset?**
 
 - What is the most profitable movie up from movies between 2000 and 2017?
-- How long did it take to produce the movies from the dataset?
+- Does budgeting affect movie popularity and/or profitability?
 - How many number of tickets were sold per movie?
 - What was the most popular movie?
 - What were the top 3 genres of movies?
 
-# Source 2
+## Source 2
 
 **Where did you download the data (e.g., a web URL)?**
 
@@ -76,7 +80,7 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 
 - What were the top 3 genres of movies?
 
-# Source 3
+## Source 3
 
 **Where did you download the data (e.g., a web URL)?**
 
