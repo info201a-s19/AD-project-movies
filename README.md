@@ -5,7 +5,7 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 **Why are you interested in this field/domain?**
 
-Our synergy in our introductory group discussions brought us to a shared interest in movies and their back-end processes and facts. Thus, we decided to explore datasets regarding Movies. Jody enjoys comedies. Lynette and Jeffrey revel in action movies, especially MCU's Avengers. All in the while, Zhi appreciates romance. There is more than beneath the eye of paying for a movie stub at the theater as there are many components before and after movie releases. Some pre-release factors consisting of budgeting, timeline, and production planning enhance the quality and enjoyability of the movie. Meanwhile, a few post-factors incorporate ratings, price, marketing, and theater distribution network - all of which aim to drive long-term profitability and to attract a global audience. We are motivated to analyze movie trends, statistics, and logistics such as calculating maximum and minimum revenues, obtaining names of most and least profitable movies or genres, computing the number of tickets sold per movie, and grouping movies based on ranges of budgets.
+Our synergy in our introductory group discussions brought us to a shared interest in movies and their back-end processes and facts. Thus, we decided to explore datasets regarding Movies. Jody enjoys comedies. Lynette and Jeffrey revel in action movies, especially MCU's Avengers. All in the while, Zhi appreciates romance. There is more than beneath the eye of paying for a movie stub at the theater as there are many components before and after movie releases. Some pre-release factors consisting of budgeting, timeline, and production planning enhance the quality and enjoyability of the movie. While, a few post-factors incorporate ratings, price, marketing, and theater distribution network - all of which aim to drive long-term profitability and to attract a global audience. We are motivated to analyze movie trends, statistics, and logistics such as calculating maximum and minimum revenues, obtaining names of most and least profitable movies or genres, computing the number of tickets sold per movie, and grouping movies based on ranges of budgets.
 
 **What other examples of data driven project have you found related to this domain (share at least 3)?**
 
@@ -18,17 +18,17 @@ Our synergy in our introductory group discussions brought us to a shared interes
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
-- What is the most profitable movie up from movies between 2000 and 2017?
-This can be investigated this by filtering datasets by movies from 2000 and 2017, arranging a newly created profit column from high amount to low amount, and viewing the top ten movies with the highest grossed (revenue - budget) amount.  
+1. What is the most profitable movie up from movies between 2000 and 2017?
+    - This can be investigated this by filtering datasets by movies from 2000 and 2017, arranging a newly created profit column from high amount to low amount, and viewing the top ten movies with the highest grossed (revenue - budget) amount.  
 
-- Does budgeting affect movie popularity and/or profitability?
-This can be effectively analyzed by drawing faceted scatter plots with the budgeting columns and the popularity (revenue/profit as well) columns and observing trends and correlations.
+2. Does budgeting affect movie popularity and/or profitability?
+    - This can be effectively analyzed by drawing faceted scatter plots with the budgeting columns and the popularity (revenue/profit as well) columns and observing trends and correlations.
 
-- What was the most popular movie?
-This can be measured by highest revenue and highest popularity obtained by our datasets. In addition, movie datasets have files that contain movie ratings that we can use to compare and supplement our findings.
+3. What was the most popular movie?
+    - This can be measured by highest revenue and highest popularity obtained by our datasets. In addition, movie datasets have files that contain movie ratings that we can use to compare and supplement our findings.
 
-- What were the top 3 genres of movies?
-This criteria can be evaluated by grouping movies based on categories/genre and then determining based on computations of highest budget, highest revenue, highest popularity, and highest ratings - all of which signal level of demand for the movie genres.
+4. What were the top 3 genres of movies?
+    - This criteria can be evaluated by grouping movies based on categories/genre and then determining based on computations of highest budget, highest revenue, highest popularity, and highest ratings - all of which signal level of demand for the movie genres.
 
 # Finding Data
 
