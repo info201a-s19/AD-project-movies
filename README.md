@@ -22,7 +22,8 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 - What were the top 3 genres of movies?
 
 # Finding Data
-**Source #1**
+
+# Source 1
 
 **Where did you download the data (e.g., a web URL)?**
 
@@ -50,7 +51,7 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 - What was the most popular movie?
 - What were the top 3 genres of movies?
 
-**Source #2**
+# Source 2
 
 **Where did you download the data (e.g., a web URL)?**
 
@@ -72,7 +73,7 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 
 - What were the top 3 genres of movies?
 
-**Source #3**
+# Source 3
 
 **Where did you download the data (e.g., a web URL)?**
 
@@ -93,7 +94,5 @@ Our synergy in our initial group discussions brought us to a shared interest in 
 **What questions (from above) can be answered using the data in this dataset?**
 
 - What is the most profitable movie up from movies between 2000 and 2017?
-
 - What was the most popular movie?
-
 - What were the top 3 genres of movies?
