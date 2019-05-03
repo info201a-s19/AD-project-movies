@@ -36,19 +36,19 @@ This criteria can be evaluated by grouping movies based on categories/genre and 
 
 **Where did you download the data (e.g., a web URL)?**
 
-- https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7
+https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-- This dataset was directly found on Kaggle by Rounak Banik who was interested in performing analysis and storytelling about the movies and its components. From that, he built a revenue forecasting model, determined success metrics, and crafted a recommender system for movies. The data source originates from an ensemble of data collected from TMDB and GroupLens. The Movie Details, Credits and Keywords have been collected from the TMDB Open API. Their API provides additional information on other movies, actors and actresses, crew members, and TV shows. The main Movies Metadata file. Contains information on 45,000 movies featured in the Full MovieLens dataset. Features include posters, backdrops, budget, revenue, release dates, languages, production countries and companies.
+This dataset was directly found on Kaggle by Rounak Banik who was interested in performing analysis and storytelling about the movies and its components. From that, he built a revenue forecasting model, determined success metrics, and crafted a recommender system for movies. The data source originates from an ensemble of data collected from TMDB and GroupLens. The Movie Details, Credits and Keywords have been collected from the TMDB Open API. Their API provides additional information on other movies, actors and actresses, crew members, and TV shows. The main Movies Metadata file. Contains information on 45,000 movies featured in the Full MovieLens dataset. Features include posters, backdrops, budget, revenue, release dates, languages, production countries and companies.
 
 **How many observations (rows) are in your data?**
 
-- There are 45,467 observations(rows).
+There are 45,467 observations(rows).
 
 **How many features (columns) are in the data?**
 
-- There are 24 features(columns).
+There are 24 features(columns).
 
 **What questions (from above) can be answered using the data in this dataset?**
 
@@ -66,37 +66,37 @@ This criteria can be evaluated by grouping movies based on categories/genre and 
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-- This dataset was collected by GroupLens, which is a research lab in the Department of Computer Science and Engineering at the University of Minnesota. It was a collaborative effort by 283228 users between January 09, 1995 and September 26, 2018 to create the dataset. Their goal was to collect data about movies to create a website that helps people find movies to watch. GroupLens was able to create datasets that contained scores, tags, links, genres, and ratings. But, the one dataset that we’re most concerned about is the movies.csv, which contains movie titles and genres that will help us answer our data-driven questions.
+This dataset was collected by GroupLens, which is a research lab in the Department of Computer Science and Engineering at the University of Minnesota. It was a collaborative effort by 283228 users between January 09, 1995 and September 26, 2018 to create the dataset. Their goal was to collect data about movies to create a website that helps people find movies to watch. GroupLens was able to create datasets that contained scores, tags, links, genres, and ratings. But, the one dataset that we’re most concerned about is the movies.csv, which contains movie titles and genres that will help us answer our data-driven questions.
 
 **How many observations (rows) are in your data?**
 
-- There are 193886 observations (rows).
+There are 193886 observations (rows).
 
 **How many features (columns) are in the data?**
 
-- There are 3 features (columns).
+There are 3 features (columns).
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-- What were the top 3 genres of movies?
+What were the top 3 genres of movies?
 
 ## Source 3
 
 **Where did you download the data (e.g., a web URL)?**
 
-- https://www.kaggle.com/juzershakir/tmdb-movies-dataset
+https://www.kaggle.com/juzershakir/tmdb-movies-dataset
 
 **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
 
-- This dataset was collected by Juzer Shakir, who investigated datasets for 10K+ movies from The Movie Database (TMDb). Shakir initially created his dataset to discover which movies had the highest profits and hits. But, overtime, he found that he wanted to learn more about the characteristics of movies and what similarities they had. This resulted in the current features that Shakir offers in his dataset: id, imbd_id, popularity, budget, revenue, original_title, cast, homepage, director, tagline, keywords, overview, runtime, genres, production_companies, release_date, vote_count, vote_average, release_year, budget_adj, and revenue_adj.
+This dataset was collected by Juzer Shakir, who investigated datasets for 10K+ movies from The Movie Database (TMDb). Shakir initially created his dataset to discover which movies had the highest profits and hits. But, overtime, he found that he wanted to learn more about the characteristics of movies and what similarities they had. This resulted in the current features that Shakir offers in his dataset: id, imbd_id, popularity, budget, revenue, original_title, cast, homepage, director, tagline, keywords, overview, runtime, genres, production_companies, release_date, vote_count, vote_average, release_year, budget_adj, and revenue_adj.
 
 **How many observations (rows) are in your data?**
 
-- There are 10866 observations (rows)
+There are 10866 observations (rows)
 
 **How many features (columns) are in the data?**
 
-- There are 21 features (columns).
+There are 21 features (columns).
 
 **What questions (from above) can be answered using the data in this dataset?**
 
