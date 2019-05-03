@@ -1,5 +1,5 @@
-# Final Project
-Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
+# Final Project: The Cinematic Universe
+![Image of Avengers Assemble!](info201avengers.png)
 
 ## Domain of Interest
 
@@ -18,16 +18,16 @@ Our synergy in our introductory group discussions brought us to a shared interes
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
-1. What is the most profitable movie up from movies between 2000 and 2017?
+- What is the most profitable movie up from movies between 2000 and 2017?
     - This can be investigated this by filtering datasets by movies from 2000 and 2017, arranging a newly created profit column from high amount to low amount, and viewing the top ten movies with the highest grossed (revenue - budget) amount.  
 
-2. Does budgeting affect movie popularity and/or profitability?
+- Does budgeting affect movie popularity and/or profitability?
     - This can be effectively analyzed by drawing faceted scatter plots with the budgeting columns and the popularity (revenue/profit as well) columns and observing trends and correlations.
 
-3. What was the most popular movie?
+- What was the most popular movie?
     - This can be measured by highest revenue and highest popularity obtained by our datasets. In addition, movie datasets have files that contain movie ratings that we can use to compare and supplement our findings.
 
-4. What were the top 3 genres of movies?
+- What were the top 3 genres of movies?
     - This criteria can be evaluated by grouping movies based on categories/genre and then determining based on computations of highest budget, highest revenue, highest popularity, and highest ratings - all of which signal level of demand for the movie genres.
 
 # Finding Data
@@ -78,7 +78,7 @@ There are 3 features (columns).
 
 **What questions (from above) can be answered using the data in this dataset?**
 
-What were the top 3 genres of movies?
+- What were the top 3 genres of movies?
 
 ## Source 3
 
