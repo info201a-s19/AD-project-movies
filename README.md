@@ -13,7 +13,7 @@ Our synergy in our introductory group discussions brought us to a shared interes
 
 - [Exploring Movie Data with Interactive Visualizations](https://towardsdatascience.com/exploring-movie-data-with-interactive-visualizations-c22e8ce5f663) utilizes The Movie Database (TMDB) data from 1910-2016. Their goal for the project was to understand temporal patterns affecting movie profitability, changes in popular genres, identifying important actors/directors, and observing changes in movie ratings and vote averages over time.
 
-- [Lorenz Hering’s Movie Data Analysis project](https://www.kaggle.com/lorenzhering/movie-data-analysis) utilizes TMDb's data set that contains information about 10,866 movies published between 1960 and 2015. His goal was to answer the questions of which genres were most common, have the highest avg. budget/revenue/profit/vote/popularity/vote count, number of movies with voting avg. >=8, and analyzing the development means of variables per genre over the years.
+- [Lorenz Hering’s Movie Data Analysis project](https://www.kaggle.com/lorenzhering/movie-data-analysis) utilizes TMDb's data set that contains information about 10,866 movies published between 1960 and 2015. His goal was to answer the questions of which genres were most common, have the highest avg. budget/revenue/profit/vote/popularity/vote count, number of movies with voting avg. >=8, and analyzing the development of means of variables per genre over the years.
 
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
