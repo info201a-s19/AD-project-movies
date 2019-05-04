@@ -54,7 +54,6 @@ There are 24 features(columns).
 
 - What is the most profitable movie up from movies between 2000 and 2017?
 - Does budgeting affect movie popularity and/or profitability?
-- How many number of tickets were sold per movie?
 - What was the most popular movie?
 - What were the top 3 genres of movies?
 
