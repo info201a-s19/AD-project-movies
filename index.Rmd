@@ -22,4 +22,18 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 ## Introduction 
-Our synergy in our introductory group discussions brought us to a shared interest in movies and their back-end processes and facts. Thus, we decided to explore datasets regarding Movies. Jody enjoys comedies. Lynette and Jeffrey revel in action movies, especially MCU's Avengers. All in the while, Zhi appreciates romance. There is more than beneath the eye of paying for a movie stub at the theater as there are many components before and after movie releases. Some pre-release factors consisting of budgeting, timeline, and production planning enhance the quality and enjoyability of the movie. While, a few post-factors incorporate ratings, price, marketing, and theater distribution network - all of which aim to drive long-term profitability and to attract a global audience. We are motivated to analyze movie trends, statistics, and logistics such as calculating maximum and minimum revenues, obtaining names of most and least profitable movies or genres, computing the number of tickets sold per movie, and grouping movies based on ranges of budgets.
+Our synergy in our introductory group discussions brought us to a shared
+interest in movies and their back-end processes and facts. Thus, we decided
+to explore datasets regarding Movies. Jody enjoys comedies. Lynette and
+Jeffrey revel in action movies, especially MCU's Avengers. All in the while,
+Zhi appreciates romance. There is more than beneath the eye of paying for a
+movie stub at the theater as there are many components before and after movie
+releases. Some pre-release factors consisting of budgeting, timeline, and
+production planning enhance the quality and enjoyability of the movie. While,
+a few post-factors incorporate ratings, price, marketing, and theater
+distribution network - all of which aim to drive long-term profitability and
+to attract a global audience. We are motivated to analyze movie trends,
+statistics, and logistics such as calculating maximum and minimum revenues,
+obtaining names of most and least profitable movies or genres, computing the
+number of tickets sold per movie, and grouping movies based on
+ranges of budgets.
