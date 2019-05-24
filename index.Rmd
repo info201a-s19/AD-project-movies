@@ -48,16 +48,21 @@ Within the movies_metadata file, there were significant information that were in
 
 # Summary Table 
 
-# Chart 1 (Zhi)
-"Insert Chart Intro"
+# Chart 1: Top 10 Most Voted Movies
+
+The purpose of this lollipop chart is to display the top 10 most voted movies.
+Each movie is ordered from least to most(left to right). The thin line and 
+circle top provides more emphasis on the values of each movie, while giving
+it a nice and modern look. 
+
 ```{r, echo = FALSE, warning = FALSE}
 top_ten_chart <- top_10(meta_movie)
 ggplotly(top_ten_chart)
 ```
 
-- One observation about Zhi Chart
-- Second observation about Zhi Chart
-
+- The number one most voted movie is Inception with 14,075 votes.
+- The tenth most voted movie from this chart is The Hunger Games, which
+has 9,634 votes. 
 
 # Chart 2: Highest Budget on Movie Production Per Year
 
