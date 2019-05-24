@@ -8,11 +8,11 @@ output: html_document
 ```{r setup, include = FALSE}
 # Load results from the analysis
 # errors and messages will not be printed given the `include = FALSE` option
-source("chart_one.R")
-source("chart_two.R")
-source("chart_three.R")
-source("summary_info.R")
-source("summary_table.R")
+source("scripts/chart_one.R")
+source("scripts/chart_two.R")
+source("scripts/chart_three.R")
+source("scripts/summary_info.R")
+source("scripts/summary_table.R")
 
 # Load additional libraries that may be needed for output
 library("knitr")
@@ -37,3 +37,12 @@ statistics, and logistics such as calculating maximum and minimum revenues,
 obtaining names of most and least profitable movies or genres, computing the
 number of tickets sold per movie, and grouping movies based on
 ranges of budgets.
+
+## Chart 1
+
+
+## Chart 2
+``r budget_by_year``
+
+
+## Chart 3
