@@ -14,4 +14,19 @@ ggplot(data = most_common_genre) +
     mapping = aes(x = number_of_genre, y = genres),
     color = "purple",
     alpha = .7,
-    size = 6)
+    size = 6
+  )
+
+movie_df <- read.csv("../data/movies_metadata.csv", stringsAsFactors = FALSE)
+# Does popularity equate to high revenue?
+
+popularity_test <- movie_df %>% 
+  filter(runtime != 0) %>% 
+  filter(revenue != 0) %>% 
+  select(runtime, revenue)
+
+View(popularity_test)
+
+ggplot(data = popularity_test) +
+  geom_point(mapping = aes(x = runtime, y = popularity))
+

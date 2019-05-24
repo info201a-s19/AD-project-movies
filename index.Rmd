@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 # Load results from the analysis
 # errors and messages will not be printed given the `include = FALSE` option
-#source("scripts/chart_one.R")
+source("scripts/chart_one.R")
 source("scripts/chart_two.R")
 #source("scripts/summary_info.R")
 #source("scripts/summary_table.R")
@@ -47,6 +47,14 @@ ranges of budgets.
 # Summary Table 
 
 # Chart 1 (Zhi)
+"Insert Chart Intro"
+```{r, echo = FALSE, warning = FALSE}
+top_ten_chart <- top_10(meta_movie)
+ggplotly(top_ten_chart)
+```
+
+- One observation about Zhi Chart
+- Second observation about Zhi Chart
 
 
 # Chart 2: Highest Budget on Movie Production Per Year
@@ -63,5 +71,5 @@ ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 - The largest budget spend has been in the year of 2011 with a budget amount of 380 million dollars!
 - An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s to 1980s.
 
- 
 # Chart 3 (lynette)
+
