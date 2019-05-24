@@ -11,13 +11,14 @@ knitr::opts_chunk$set(echo = TRUE)
 # errors and messages will not be printed given the `include = FALSE` option
 source("scripts/chart_one.R")
 source("scripts/chart_two.R")
-#source("scripts/summary_info.R")
+source("scripts/summary_info.R")
 #source("scripts/summary_table.R")
 
 # Load additional libraries that may be needed for output
 library("stringr")
 library("plotly")
 library("knitr")
+library("dplyr")
 ```
 
 ```{r, include = FALSE, echo = FALSE}
@@ -43,6 +44,7 @@ number of tickets sold per movie, and grouping movies based on
 ranges of budgets.
 
 # Summary Paragraph (Jody)
+Within the movies_metadata file, there were significant information that were interesting. The longest runtime of a movie was `r get_summary_info$longest_runtime` minutes. That movie was `r get_summary_info$name_longest_runtime`. For the movie with the highest vote count, it was `r get_summary_info$highest_vote_count` which was the highest voted film. The tag line of `r get_summary_info$highest_vote_count`is `r get_summary_info$highest_vote_count_tagline`.
 
 # Summary Table 
 
