@@ -19,8 +19,8 @@ top_10 <- function(df) {
                      y=0, 
                      yend=vote_count)) + 
     labs(title="Top 10 Most Voted Movies", 
-         x = "Number of Votes", 
-         y = "Movie Titles") + 
+         x = "Movie Titles", 
+         y = "Number of Votes") + 
     theme(axis.text.x = element_text(angle=65, vjust=0.5))
   return(plot)
   }
