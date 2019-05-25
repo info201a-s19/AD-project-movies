@@ -41,7 +41,8 @@ to attract a global audience. We are motivated to analyze movie trends,
 statistics, and logistics such as calculating maximum and minimum revenues,
 obtaining names of most and least profitable movies or genres, computing the
 number of tickets sold per movie, and grouping movies based on
-ranges of budgets.
+ranges of budgets. The source of the dataset for our project can be found
+[here](https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7).
 
 # Summary Paragraph
 Within the movies_metadata file, there were significant information
