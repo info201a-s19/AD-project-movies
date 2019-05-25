@@ -72,7 +72,7 @@ This table exhibits the top 25 movies based on revenues, depicting the maximum m
 # Chart 1: Top 10 Most Voted Movies
 
 The purpose of this lollipop chart is to display the top 10 most voted movies.
-Each movie is ordered from least to most(left to right). The thin line and 
+Each movie is ordered from least to most (left to right). The thin line and 
 circle top provides more emphasis on the values of each movie, while giving
 it a nice and modern look. 
 
@@ -104,7 +104,7 @@ ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 
 # Chart 3: Most Popular Genres
 
-This chart has shown the top 10 most common single and mixed genre for all kinds of movies that have been released before. The chart is to relfect the variance of different types genres with the change of number of movies. I made it into an order start from the least common genres to the most common genres in the top 10 popular genres because I want readers to quickly see the order of the most popular 10 types of genres in an order.
+This chart has shown the top 10 most common single and mixed genre for all kinds of movies that have been released before. The chart is to reflect the variance of different types genres with the change of number of movies. I made it into an order start from the least common genres to the most common genres in the top 10 popular genres because I want readers to quickly see the order of the most popular 10 types of genres in an order.
 
 ```{r, echo = FALSE, warning = FALSE}
 genre_popular_chart <- popular_genre(movies)
