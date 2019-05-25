@@ -2,7 +2,8 @@ library("dplyr")
 library("ggplot2")
 options(scipen = 999)
 
-
+# What is the top 10 most common single and mixed genre for all kinds
+# of movies that have been released before?
 popular_genre <- function(df) {
   most_common_genre <- df %>%
   group_by(genres) %>% 
