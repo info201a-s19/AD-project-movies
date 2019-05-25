@@ -43,7 +43,7 @@ obtaining names of most and least profitable movies or genres, computing the
 number of tickets sold per movie, and grouping movies based on
 ranges of budgets.
 
-# Summary Paragraph (Jody)
+# Summary Paragraph
 Within the movies_metadata file, there were significant information that were interesting. The longest runtime of a movie was **`r get_summary_info(meta_movie)[1]`** minutes. That movie was _`r get_summary_info(meta_movie)[2]`_. The movie  _`r get_summary_info(meta_movie)[3]`_, is significant because it has the highest vote count compared to any other movie. The tagline of _`r get_summary_info(meta_movie)[3]`_ is "`r get_summary_info(meta_movie)[4]`" Also, the movie with the highest revenue is _`r get_summary_info(meta_movie)[5]`_.
 
 # Summary Table 
