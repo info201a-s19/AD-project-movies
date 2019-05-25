@@ -44,7 +44,15 @@ number of tickets sold per movie, and grouping movies based on
 ranges of budgets.
 
 # Summary Paragraph
-Within the movies_metadata file, there were significant information that were interesting. The longest runtime of a movie was **`r get_summary_info(meta_movie)[1]`** minutes. That movie was _`r get_summary_info(meta_movie)[2]`_. The movie  _`r get_summary_info(meta_movie)[3]`_, is significant because it has the highest vote count compared to any other movie. The tagline of _`r get_summary_info(meta_movie)[3]`_ is "`r get_summary_info(meta_movie)[4]`" Also, the movie with the highest revenue is _`r get_summary_info(meta_movie)[5]`_.
+Within the movies_metadata file, there were significant information
+that were interesting. The longest runtime of a movie was
+**`r get_summary_info(meta_movie)[1]`** minutes. That movie was
+_`r get_summary_info(meta_movie)[2]`_. The movie
+_`r get_summary_info(meta_movie)[3]`_, is significant because it has the
+highest vote count compared to any other movie. The tagline of
+_`r get_summary_info(meta_movie)[3]`_ is
+"`r get_summary_info(meta_movie)[4]`" Also, the movie with the highest
+revenue is _`r get_summary_info(meta_movie)[5]`_.
 
 # Summary Table 
 
@@ -66,7 +74,10 @@ has 9,634 votes.
 
 # Chart 2: Highest Budget on Movie Production Per Year
 
-This chart intends to show the relationship between the maximum budget amounts for movie production from each year. Budget amounts have increased over time as a result of many factors, one being currency inflation and technology equipments and enhancements like CGI used in films.
+This chart intends to show the relationship between the maximum budget
+amounts for movie production from each year. Budget amounts have increased
+over time as a result of many factors, one being currency inflation and
+technology equipments and enhancements like CGI used in films.
 
 ```{r, echo = FALSE, warning = FALSE}
 budget_chart <- budget_by_year(meta_movie)
@@ -75,8 +86,10 @@ budget_chart <- budget_by_year(meta_movie)
 ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 ```
 
-- The largest budget spend has been in the year of 2011 with a budget amount of 380 million dollars!
-- An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s to 1980s.
+- The largest budget spend has been in the year of 2011 with a budget
+amount of 380 million dollars!
+- An upward exponential growth of budgeting is seen to accelerate beginning
+around the 1970s to 1980s.
 
 # Chart 3 (lynette)
 
