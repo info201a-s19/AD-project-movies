@@ -109,7 +109,7 @@ ggplotly(genre_popular_chart)
 
 - There is an obvious gap between the top three popular genre type compared to the rest seven types. The rest seven types lie between 1000 to 2000. However, the top three lie above 4000.
 
-# Chart 4 (Jeff)
+# Chart 4: Correlation between Movie Run Time and Earned Revenue
 This chart aims to answer the question whether run time of movies has correlations with the amount of revenues gained upon release of the movies. *Question at Hand:* Is there a correlation between run time and revenue?
 ```{r, echo = FALSE, warning = FALSE}
 scatter_run_rev <- correlation(meta_movie)
@@ -117,5 +117,7 @@ scatter_run_rev <- correlation(meta_movie)
 ##Plot Interactive Bar Chart
 ggplotly(scatter_run_rev)
 ```
+
 - There is low to medium correlation between run time and revenue
+
 - Vast majority movies are not that profitable regardless of run time without taking into account currency inflation and time period. Some movies are seen to be following the correlation in terms of longer movies being more profitable in revenues and medium length movies generating fair amounts of revenue.
