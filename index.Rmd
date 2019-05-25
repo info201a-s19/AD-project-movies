@@ -13,8 +13,8 @@ source("scripts/chart_one.R")
 source("scripts/chart_two.R")
 source("scripts/chart_three.R")
 source("scripts/chart_four.R")
-#source("scripts/summary_info.R")
 source("scripts/summary_info.R")
+
 #source("scripts/summary_table.R")
 
 # Load additional libraries that may be needed for output
@@ -93,9 +93,23 @@ ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 
 - The largest budget spend has been in the year of 2011 with a budget amount of $380 million!
 - An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s.
+<<<<<<< HEAD
 
 # Chart 3: Most Popular Genres
 Add Lynette Intro
+=======
+=======
+- The largest budget spend has been in the year of 2011 with a budget
+amount of 380 million dollars!
+- An upward exponential growth of budgeting is seen to accelerate beginning
+around the 1970s to 1980s.
+>>>>>>> 11189871fb03d4db87beaee6a148831800f0caf3
+
+# Chart 3 (Lynette)
+
+This chart has shown the top 10 most common single and mixed genre for all kinds of movies that have been released before. The chart is to relfect the variance of different types genres with the change of number of movies. I made it into an order start from the least common genres to the most common genres in the top 10 popular genres because I want readers to quickly see the order of the most popular 10 types of genres in an order.
+
+>>>>>>> d8ab7c6364743f9ece53cefec05493a16e0c2edb
 ```{r, echo = FALSE, warning = FALSE}
 genre_popular_chart <- popular_genre(movies)
 
@@ -103,8 +117,9 @@ genre_popular_chart <- popular_genre(movies)
 ggplotly(genre_popular_chart)
 ```
 
-- One observation for lynette
-- Two observation for lynette
+- What's obvious at a glance is that Drama is the most common genre type. Comedy is the second popular genre type and Documentary is the third common genre type in all movies.
+
+- There is an obvious gap between the top three popular genre type compared to the rest seven types. The rest seven types lie between 1000 to 2000. However, the top three lie above 4000.
 
 # Chart 4 (Jeff)
 This chart aims to answer the question whether run time of movies has correlations with the amount of revenues gained upon release of the movies. *Question at Hand:* Is there a correlation between run time and revenue?
