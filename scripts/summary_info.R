@@ -33,15 +33,15 @@ get_summary_info <- function(dataset) {
     arrange(-vote_count) %>%
     top_n(1, vote_count) %>%
     pull(tagline)
-  top_3_revenue_titles <- dataset %>%
+  top_revenue_title <- dataset %>%
     select(revenue, title) %>%
     arrange(-revenue) %>%
-    top_n(3, revenue) %>%
+    top_n(1, revenue) %>%
     pull(title)
   ret$longest_runtime <- longest_runtime
   ret$name_longest_runtime <- name_longest_runtime
   ret$highest_vote_count <- highest_vote_count
   ret$highest_vote_count_tagline <- highest_vote_count_tagline
-  ret$top_3_revenue_titles <- top_3_revenue_titles
+  ret$top_revenue_title <- top_revenue_title
   return (ret)
 }
