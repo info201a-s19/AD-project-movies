@@ -73,6 +73,14 @@ are displayed in order to supplement, in general, the movies' success.
 Consistently, the top 25 movies demonstrate high revenues, with typically
 a more costly budget and higher ratings!
 
+- The highest budget movie is Avatar, with a budget of 237000000.
+
+- The top 5 movies in terms of revenue are Avatar,
+Star Wars: The Force Awakens, Titanic, The Avengers, and Jurassic World.
+
+- At the bottom of the top 25 grossing movies is Alice in Wonderland with
+a revenue of 1025491110, a budget of 200000000, and an avg. vote of 6.4.
+
 # Chart 1: Top 10 Most Voted Movies
 
 The purpose of this lollipop chart is to display the top 10 most voted movies.
@@ -144,7 +152,7 @@ scatter_run_rev <- correlation(meta_movie)
 ggplotly(scatter_run_rev)
 ```
 
-- There is low to medium correlation between run time and revenue
+- There is low to medium correlation between run time and revenue.
 
 - Vast majority movies are not that profitable regardless of run time
 without taking into account currency inflation and time period. Some movies
