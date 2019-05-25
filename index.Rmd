@@ -11,14 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 # errors and messages will not be printed given the `include = FALSE` option
 source("scripts/chart_one.R")
 source("scripts/chart_two.R")
+<<<<<<< HEAD
 source("scripts/chart_three.R")
 #source("scripts/summary_info.R")
+=======
+source("scripts/summary_info.R")
+>>>>>>> 11189871fb03d4db87beaee6a148831800f0caf3
 #source("scripts/summary_table.R")
 
 # Load additional libraries that may be needed for output
 library("stringr")
 library("plotly")
 library("knitr")
+library("dplyr")
 ```
 
 ```{r, include = FALSE, echo = FALSE}
@@ -42,26 +47,44 @@ to attract a global audience. We are motivated to analyze movie trends,
 statistics, and logistics such as calculating maximum and minimum revenues,
 obtaining names of most and least profitable movies or genres, computing the
 number of tickets sold per movie, and grouping movies based on
-ranges of budgets.
+ranges of budgets. The source of the dataset for our project can be found
+[here](https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7).
 
-# Summary Paragraph (Jody)
+# Summary Paragraph
+Within the movies_metadata file, there were significant information
+that were interesting. The longest runtime of a movie was
+**`r get_summary_info(meta_movie)[1]`** minutes. That movie was
+_`r get_summary_info(meta_movie)[2]`_. The movie
+_`r get_summary_info(meta_movie)[3]`_, is significant because it has the
+highest vote count compared to any other movie. The tagline of
+_`r get_summary_info(meta_movie)[3]`_ is
+"`r get_summary_info(meta_movie)[4]`" Also, the movie with the highest
+revenue is _`r get_summary_info(meta_movie)[5]`_.
 
 # Summary Table 
 
-# Chart 1 (Zhi)
-"Insert Chart Intro"
+# Chart 1: Top 10 Most Voted Movies
+
+The purpose of this lollipop chart is to display the top 10 most voted movies.
+Each movie is ordered from least to most(left to right). The thin line and 
+circle top provides more emphasis on the values of each movie, while giving
+it a nice and modern look. 
+
 ```{r, echo = FALSE, warning = FALSE}
 top_ten_chart <- top_10(meta_movie)
 ggplotly(top_ten_chart)
 ```
 
-- One observation about Zhi Chart
-- Second observation about Zhi Chart
-
+- The number one most voted movie is Inception with 14,075 votes.
+- The tenth most voted movie from this chart is The Hunger Games, which
+has 9,634 votes. 
 
 # Chart 2: Highest Budget on Movie Production Per Year
 
-This chart intends to show the relationship between the maximum budget amounts for movie production from each year. Budget amounts have increased over time as a result of many factors, one being currency inflation and technology equipments and enhancements like CGI used in films.
+This chart intends to show the relationship between the maximum budget
+amounts for movie production from each year. Budget amounts have increased
+over time as a result of many factors, one being currency inflation and
+technology equipments and enhancements like CGI used in films.
 
 ```{r, echo = FALSE, warning = FALSE}
 budget_chart <- budget_by_year(meta_movie)
@@ -70,8 +93,15 @@ budget_chart <- budget_by_year(meta_movie)
 ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 ```
 
+<<<<<<< HEAD
 - The largest budget spend has been in the year of 2011 with a budget amount of $380 million!
 - An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s.
+=======
+- The largest budget spend has been in the year of 2011 with a budget
+amount of 380 million dollars!
+- An upward exponential growth of budgeting is seen to accelerate beginning
+around the 1970s to 1980s.
+>>>>>>> 11189871fb03d4db87beaee6a148831800f0caf3
 
 # Chart 3 (Lynette)
 Add Lynette Intro
