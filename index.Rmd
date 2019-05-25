@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # errors and messages will not be printed given the `include = FALSE` option
 source("scripts/chart_one.R")
 source("scripts/chart_two.R")
+source("scripts/chart_three.R")
 #source("scripts/summary_info.R")
 #source("scripts/summary_table.R")
 
@@ -22,6 +23,7 @@ library("knitr")
 
 ```{r, include = FALSE, echo = FALSE}
 meta_movie <- read.csv("data/movies_metadata.csv", stringsAsFactors = FALSE)
+movies <- read.csv("data/movies.csv", stringsAsFactors = FALSE)
 ```
 
 
@@ -68,8 +70,23 @@ budget_chart <- budget_by_year(meta_movie)
 ggplotly(budget_chart, tooltip = c("year", "max_budget"))
 ```
 
-- The largest budget spend has been in the year of 2011 with a budget amount of 380 million dollars!
-- An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s to 1980s.
+- The largest budget spend has been in the year of 2011 with a budget amount of $380 million!
+- An upward exponential growth of budgeting is seen to accelerate beginning around the 1970s.
 
-# Chart 3 (lynette)
+# Chart 3 (Lynette)
+Add Lynette Intro
+```{r, echo = FALSE, warning = FALSE}
+genre_popular_chart <- popular_genre(movies)
 
+##Plot Interactive Bar Chart
+ggplotly(genre_popular_chart)
+```
+
+- One observation for lynette
+- Two observation for lynette
+
+# Chart 4 (Jeff)
+Add Jeff Intro
+
+- One observation for Jeff
+- Two observation for Jeff
