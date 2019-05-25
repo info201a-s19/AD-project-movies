@@ -14,6 +14,7 @@ source("scripts/chart_two.R")
 source("scripts/chart_three.R")
 source("scripts/chart_four.R")
 source("scripts/summary_info.R")
+source("scripts/summary_table.R")
 
 #source("scripts/summary_table.R")
 
@@ -22,6 +23,7 @@ library("stringr")
 library("plotly")
 library("knitr")
 library("dplyr")
+library("kableExtra")
 ```
 
 ```{r, include = FALSE, echo = FALSE}
@@ -59,7 +61,13 @@ _`r get_summary_info(meta_movie)[3]`_ is
 "`r get_summary_info(meta_movie)[4]`" Also, the movie with the highest
 revenue is _`r get_summary_info(meta_movie)[5]`_.
 
-# Summary Table 
+# Summary Table of Top 25 Grossing Movies
+```{r, echo = FALSE, warning = FALSE}
+aggregate_table <- get_summary_of_top_25(meta_movie)
+kable(aggregate_table, col.names = c("Title", "Revenue", "Budget", "Avg Vote Out of 10")) %>% 
+kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE)
+```
+This table exhibits the top 25 movies based on revenues, depicting the maximum money a movie is able to generate. In addition, budget and votes are displayed in order to supplement, in general, the movies' success. Consistently, the top 25 movies demonstrate high revenues, with typically a more costly budget and higher ratings!
 
 # Chart 1: Top 10 Most Voted Movies
 
