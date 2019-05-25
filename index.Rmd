@@ -104,7 +104,9 @@ around the 1970s to 1980s.
 >>>>>>> 11189871fb03d4db87beaee6a148831800f0caf3
 
 # Chart 3 (Lynette)
-Add Lynette Intro
+
+This chart has shown the top 10 most common single and mixed genre for all kinds of movies that have been released before. The chart is to relfect the variance of different types genres with the change of number of movies. I made it into an order start from the least common genres to the most common genres in the top 10 popular genres because I want readers to quickly see the order of the most popular 10 types of genres in an order.
+
 ```{r, echo = FALSE, warning = FALSE}
 genre_popular_chart <- popular_genre(movies)
 
@@ -112,8 +114,9 @@ genre_popular_chart <- popular_genre(movies)
 ggplotly(genre_popular_chart)
 ```
 
-- One observation for lynette
-- Two observation for lynette
+- What's obvious at a glance is that Drama is the most common genre type. Comedy is the second popular genre type and Documentary is the third common genre type in all movies.
+
+- There is an obvious gap between the top three popular genre type compared to the rest seven types. The rest seven types lie between 1000 to 2000. However, the top three lie above 4000.
 
 # Chart 4 (Jeff)
 Add Jeff Intro
