@@ -11,12 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 # errors and messages will not be printed given the `include = FALSE` option
 source("scripts/chart_one.R")
 source("scripts/chart_two.R")
-<<<<<<< HEAD
 source("scripts/chart_three.R")
 #source("scripts/summary_info.R")
-=======
 source("scripts/summary_info.R")
->>>>>>> 11189871fb03d4db87beaee6a148831800f0caf3
+
 #source("scripts/summary_table.R")
 
 # Load additional libraries that may be needed for output
