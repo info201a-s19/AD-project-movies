@@ -11,24 +11,18 @@ page_one <- tabPanel(
       
       # Radio buttons to adjust data based on race
       radioButtons(
-        inputId = "chart_type",
+        inputId = "rev_or_budget",
         label = "Revenue or Budget by Year",
         choices = c("Revenue",
           "Budget"
         )
-      ),
-      
-      # Checkbox for metro vs. rural coloring
-      checkboxInput(
-        inputId = "ruralormetro",
-        label = "Metro vs. Rural",
-        value = FALSE
       )
+      # Checkbox for metro vs. rural coloring
     ),
     
     # Includes interactive plotly chart and html message
     mainPanel(
-      plotlyOutput(outputId = "chart")
+      plotlyOutput(outputId = "my_chart")
     )
   )
 )
@@ -40,13 +34,19 @@ page_two <- tabPanel(
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
-      
+      radioButtons(
+        inputId = "chart_type",
+        label = "Revenue or Budget by Year",
+        choices = c("Revenue",
+                    "Budget"
+        )
     )
   ),
   mainPanel(
+    plotlyOutput(outputId = "revbudg_chart")
+  )
   )
 )
-
 
 page_three <- tabPanel(
   "Zhi Ye, Jody, or Lynette", # label for the tab in the navbar
@@ -55,17 +55,23 @@ page_three <- tabPanel(
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
-
+      radioButtons(
+        inputId = "chart_type",
+        label = "Revenue or Budget by Year",
+        choices = c("Revenue",
+                    "Budget"
+        )
       )
     ),
     mainPanel(
+      plotlyOutput(outputId = "revbudg_chart")
     )
   )
 )
 
 
 # Pass each page to a multi-page layout (`navbarPage`)
-my_ui <- navbarPage(
+ui <- navbarPage(
   "My Application", # application title
   page_one, # include the first page content
   page_two, # include the second page content
