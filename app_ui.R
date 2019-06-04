@@ -35,11 +35,12 @@ page_one <- tabPanel(
 
 # Create x and y variables for page two
 yxaxis_var_one <- list(
-  "Budget" = "budget",
-  "Revenue" = "revenue",
+  "Budget" = "budget_adj",
+  "Revenue" = "revenue_adj",
   "Runtime" = "runtime",
   "Votes Count" = "vote_count",
-  "Vote Average" = "vote_average"
+  "Vote Average" = "vote_average",
+  "Popularity" = "popularity"
 )
 
 # Define the first page content; uses tabPanel, sidebarLayout, 
