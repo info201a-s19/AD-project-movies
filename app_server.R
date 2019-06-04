@@ -2,6 +2,8 @@ library("ggplot2")
 library("plotly")
 library("dplyr")
 library("tidyverse")
+library("shiny") # Load shiny
+library("tidyr") # Loads tidyr
 options(scipen = 999)
 
 server <- function(input, output) {
@@ -37,6 +39,23 @@ server <- function(input, output) {
         x = "Year", y = "($M)"
       )
         return(by_year)              
+  })
+  
+  # Create a server function that display visualizations with labels.
+  # Creates a scatterplot
+  output$scatter <- renderPlot({
+    xvar_name_one <- names(yxaxis_var_one)[yxaxis_var_one == input$x_var_one]
+    yvar_name_one <- names(yxaxis_var_one)[yxaxis_var_one == input$y_var_one]
+    title <- paste0(xvar_name_one, " v.s. ", yvar_name_one)
+    
+    p <- ggplot(df) +
+      geom_point(
+        mapping = aes_string(x = input$x_var_one, y = input$y_var_one),
+        size = input$size_one,
+        color = input$color_one
+      ) +
+      labs(x = xvar_name_one, y = yvar_name_one, title = title)
+    p
   })
 }
 
