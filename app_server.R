@@ -63,6 +63,23 @@ server <- function(input, output) {
       )
     p
   })
+  
+  output$test <- renderPlot({
+  q <- ggplot(top_10_df, aes(x = original_title, y = yaxis_var_three)) +
+    geom_point(size = 3) +
+    geom_segment(aes(
+      x = original_title,
+      xend = original_title,
+      y = 0,
+      yend = yaxis_var_three
+    )) +
+    labs(
+      title = "Top 10 Most Voted Movies",
+      x = "Movie Titles",
+      y = "Number of Votes"
+    ) +
+    theme(axis.text.x = element_text(angle = 65, vjust = 0.5))
+  q
+  })
 }
-
 
