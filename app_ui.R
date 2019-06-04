@@ -79,6 +79,54 @@ page_two <- tabPanel(
   )
 )
 
+tmbd_df <- read.csv("data/tmdb_movies_data.csv", stringsAsFactors = FALSE)
+
+top_10_df <- tmbd_df %>%
+  group_by(original_title) %>%
+  summarise(revenue_adj = sum(revenue_adj), na.rm = TRUE) %>%
+  top_n(10, wt = revenue_adj) %>%
+  arrange(revenue_adj) %>%
+  mutate(original_title = factor(original_title, original_title))
+
+
+# Create y variable for page two
+yaxis_var_three <- list(
+     "Budget" = "budget_adj",
+     "Revenue" = "revenue_adj",
+     "Runtime" = "runtime",
+     "Votes Count" = "vote_count",
+     "Vote Average" = "vote_average",
+     "Popularity" = "popularity",
+     "Year" = "release_year"
+)
+
+# Define the second page content; uses tabPanel, sidebarLayout, 
+# sidebarPanel, selectInput, mainPanel, etc. 
+page_three <- tabPanel(
+  titlePanel("Zhi"), # show with a displayed title
+  # This content uses a sidebar layout
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "y_var_three",
+        label = "Y Variable",
+        choices = yaxis_var_three,
+        selected = "budget_adj"
+      ),
+      selectInput(
+        "color_three",
+        label = "Color",
+        choices = list("Purple" = "purple",
+                       "Orange" = "orange",
+                       "Maroon" = "maroon")
+      )
+    ),
+    mainPanel(
+      plotOutput("test")
+    )
+  )
+)
+
 summary_page <- tabPanel(
   "Summary",
   mainPanel(
@@ -93,5 +141,6 @@ ui <- navbarPage(
   "My Application", # application title
   page_one,
   page_two,
+  page_three,
   summary_page
 )
