@@ -78,10 +78,19 @@ page_two <- tabPanel(
   )
 )
 
+summary_page <- tabPanel(
+  "Summary",
+  mainPanel(
+    tags$h1("Conclusion of our Data"),
+    tags$p(" Our conclusion with this ejsokfjsdlkfsdkfj .....
+           ")
+  )
+)
 
 # Pass each page to a multi-page layout (`navbarPage`)
 ui <- navbarPage(
   "My Application", # application title
   page_one,
-  page_two
+  page_two,
+  summary_page
 )
