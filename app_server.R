@@ -49,12 +49,16 @@ server <- function(input, output) {
     title <- paste0(xvar_name_one, " v.s. ", yvar_name_one)
     
     p <- ggplot(df) +
-      geom_point(
-        mapping = aes_string(x = input$x_var_one, y = input$y_var_one),
-        size = input$size_one,
-        color = input$color_one
-      ) +
-      labs(x = xvar_name_one, y = yvar_name_one, title = title)
+      geom_point(mapping = aes_string(x = input$x_var_one, y = input$y_var_one), alpha = (1 / 10),
+                 size = input$size_one,
+                 color = input$color_one
+                 ) +
+      #scale_x_continuous(breaks = seq(0, max(input$x_var_one), 20)) +
+      #scale_y_continuous(breaks = seq(0, max(input$y_var_one), 500000000)) +
+      labs(
+        title = title,
+        x = xvar_name_one, y = yvar_name_one
+      )
     p
   })
 }
