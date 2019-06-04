@@ -1,5 +1,10 @@
-library("ggplot2")
 library("plotly")
+library("shiny") # Load shiny
+library("dplyr") # Load dplyr
+library("tidyr") # Loads tidyr
+library("leaflet") # Load leaflet
+library("ggplot2") # Load ggplot2
+
 
 page_one <- tabPanel(
   "Jeff Zhao",
@@ -22,49 +27,7 @@ page_one <- tabPanel(
     
     # Includes interactive plotly chart and html message
     mainPanel(
-      plotlyOutput(outputId = "my_chart")
-    )
-  )
-)
-
-page_two <- tabPanel(
-  "Zhi Ye, Jody, or Lynette", # label for the tab in the navbar
-  titlePanel("title goes here"),
-  
-  # This content uses a sidebar layout
-  sidebarLayout(
-    sidebarPanel(
-      radioButtons(
-        inputId = "chart_type",
-        label = "Revenue or Budget by Year",
-        choices = c("Revenue",
-                    "Budget"
-        )
-    )
-  ),
-  mainPanel(
-    plotlyOutput(outputId = "revbudg_chart")
-  )
-  )
-)
-
-page_three <- tabPanel(
-  "Zhi Ye, Jody, or Lynette", # label for the tab in the navbar
-  titlePanel("title goes here"),
-  
-  # This content uses a sidebar layout
-  sidebarLayout(
-    sidebarPanel(
-      radioButtons(
-        inputId = "chart_type",
-        label = "Revenue or Budget by Year",
-        choices = c("Revenue",
-                    "Budget"
-        )
-      )
-    ),
-    mainPanel(
-      plotlyOutput(outputId = "revbudg_chart")
+      plotOutput(outputId = "my_chart")
     )
   )
 )
@@ -73,7 +36,5 @@ page_three <- tabPanel(
 # Pass each page to a multi-page layout (`navbarPage`)
 ui <- navbarPage(
   "My Application", # application title
-  page_one, # include the first page content
-  page_two, # include the second page content
-  page_three
+  page_one
 )
