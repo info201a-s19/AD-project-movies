@@ -54,13 +54,13 @@ page_two <- tabPanel(
         "x_var_one",
         label = "X Variable",
         choices = yxaxis_var_one,
-        selected = "vote_average"
+        selected = "runtime"
       ),
       selectInput(
         "y_var_one",
         label = "Y Variable",
         choices = yxaxis_var_one,
-        selected = "vote_count"
+        selected = "revenue"
       ),
       selectInput(
         "color_one",
