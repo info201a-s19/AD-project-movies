@@ -8,6 +8,8 @@ options(scipen = 999)
 
 server <- function(input, output) {
   df <- read.csv("data/movies_metadata.csv", stringsAsFactors = FALSE)
+  tmbd_df <- read.csv("data/tmdb_movies_data.csv", stringsAsFactors = FALSE)
+  
   df$numeric_budget <- as.numeric(as.character(df$budget))
   df$numeric_rev <- as.numeric(as.character(df$revenue))
   bud_rev_df <- df %>%
@@ -48,7 +50,7 @@ server <- function(input, output) {
     yvar_name_one <- names(yxaxis_var_one)[yxaxis_var_one == input$y_var_one]
     title <- paste0(xvar_name_one, " v.s. ", yvar_name_one)
     
-    p <- ggplot(df) +
+    p <- ggplot(tmbd_df) +
       geom_point(mapping = aes_string(x = input$x_var_one, y = input$y_var_one), alpha = (1 / 10),
                  size = input$size_one,
                  color = input$color_one
