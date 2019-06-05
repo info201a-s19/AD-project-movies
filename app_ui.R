@@ -27,7 +27,7 @@ page_one <- tabPanel(
     
     # Includes interactive plotly chart and html message
     mainPanel(
-      plotOutput(outputId = "my_chart")
+      plotlyOutput(outputId = "my_chart")
     )
   )
 )

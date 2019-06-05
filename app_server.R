@@ -19,7 +19,7 @@ server <- function(input, output) {
               max_rev = max(numeric_rev, na.rm = TRUE)/1000000) %>%
     filter(str_count(year) == 4)
   
-  output$my_chart <- renderPlot({
+  output$my_chart <- renderPlotly({
     y_axis_select <- switch(input$rev_or_budget,
                             "Revenue" = bud_rev_df[["max_rev"]],
                             "Budget" = bud_rev_df[["max_budget"]])
@@ -40,7 +40,7 @@ server <- function(input, output) {
         title = chart_title_select,
         x = "Year", y = "($M)"
       )
-        return(by_year)              
+        return(ggplotly(by_year))              
   })
   
   # Create a server function that display visualizations with labels.
