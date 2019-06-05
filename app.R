@@ -14,4 +14,3 @@ source("app_server.R")
 
 # Create a new `shinyApp()` using the loaded `ui` and `server` variables
 shinyApp(ui = ui, server = server)
-
