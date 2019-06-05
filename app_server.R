@@ -87,7 +87,7 @@ server <- function(input, output) {
                           "Popularity" = "Popularity",
                           "Year" = "Release Year")
   q <- ggplot(top_10_df, aes(x = original_title, y = y_axis_select)) +
-    geom_point(size = 3) +
+    geom_point(size = 3, color = input$color_three) +
     geom_segment(aes(
       x = original_title,
       xend = original_title,
