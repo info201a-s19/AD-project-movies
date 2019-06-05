@@ -102,7 +102,15 @@ page_one <- tabPanel(
 
     # Includes interactive plotly chart and html message
     mainPanel(
-      plotlyOutput(outputId = "my_chart")
+      plotlyOutput(outputId = "my_chart"),
+      p("This chart reviews the revenue or budget of movies by year.
+        The user is able to ulitilzed the widgets on the side to select
+        whether they want to view revenue or budget as well as changing the
+        color of the chart. Once selected, the user is able to hover over the
+        chart to view the specfic amount for that year. For example, the 
+        highest revenue in 2009 was $2787.965087 million, while the highest
+        budget in 2009 was $250 million."
+        )
     )
   )
 )
@@ -160,7 +168,19 @@ page_two <- tabPanel(
       )
     ),
     mainPanel(
-      plotlyOutput("scatter")
+      plotlyOutput("scatter"),
+      p("This scatterplot allows our user to make comparisons and see if 
+        there are correlations within the movie dataset. By utilizing the
+        widgets on the left, our user can select x and y variables such as
+        budget, revenue, runtime, vote count, vote average, and popularity.
+        Additionally, our user are able to change the color of the
+        scatterplot and the size of the points to suit their needs. For
+        example, by setting runtime on the x variable, revenue on the y
+        variable, color to purple with size 3 points, the user will be able
+        to tell that there is a low to medium correlation between runtime and
+        revenue. Lastly, our user can hover over the points to receive specific
+        values."
+        )
     )
   )
 )
@@ -201,7 +221,19 @@ page_three <- tabPanel(
       )
     ),
     mainPanel(
-      plotlyOutput("lollipop")
+      plotlyOutput("lollipop"),
+      p("This lollipop chart allows our user to view the top 10 most
+        voted movies. Some movies in this list includes: Avatar, Star
+        Wars, and The Avengers. But, more importantly, by utilizing the
+        widgets on the left, our user can view the budget, revenue, runtime,
+        vote count, vote average, popularity, and release year of each top 10
+        movie. Additionally, they are able to change colors of the chart to
+        suit their needs as well as hover over the tip of the lollipop bars to
+        view specific information regarding the chosen y variable. For example,
+        by selecting revenue as the y variable and changing the color to red,
+        it is easy to recognize that The Avengers has the lowest revenue
+        amongst this top 10. By hovering over it, I can see that its revenue 
+        was $1,443,191,435.")
     )
   )
 )
