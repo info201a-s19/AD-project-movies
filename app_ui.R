@@ -210,7 +210,7 @@ page_three <- tabPanel(
 # Additionally, add an image, descriptions, specific piece of data,
 # and a broad implication for the takeaways. 
 summary_page <- tabPanel(
-  "Summary",
+  "Conclusion",
   mainPanel(
     h1("Summary"),
     img(src = "./imgs/summarytakeaways.png", width = 720, height = 400),
