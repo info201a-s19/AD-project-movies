@@ -5,10 +5,13 @@ library("tidyr") # Loads tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
 
-introduction <- tabPanel (
-  "Project Overview",
+
+introduction <- tabPanel(   
+  "Home",
+  headerPanel("Project Overview"),
+
   mainPanel(
-    h1("Final Project: The Cinematic Universe"),
+    h2("Final Project: The Cinematic Universe"),
     p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
     p("5/22/2019"),
     
@@ -63,8 +66,7 @@ introduction <- tabPanel (
 
 page_one <- tabPanel(
   "Revenue/Budget (Year)",
-  titlePanel("Revenue and Budget by Year"),
-  
+  headerPanel("Revenue/Budget"),
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -95,6 +97,7 @@ page_one <- tabPanel(
     )
   )
 )
+
 # Create x and y variables for page two
 yxaxis_var_one <- list(
   "Budget" = "budget_adj",
@@ -109,7 +112,7 @@ yxaxis_var_one <- list(
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_two <- tabPanel(
   "Scatterplots", # label for the tab in the navbar
-  titlePanel("Zhi Ye"), # show with a displayed title
+  headerPanel("Multi-Adjusting Scatterplot"), # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -152,7 +155,8 @@ page_two <- tabPanel(
 # Define the third page content; uses tabPanel, sidebarLayout, 
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_three <- tabPanel(
-  "Top 10 Movies", # show with a displayed title
+  "Top 10 Movies",
+  headerPanel("Top 10 Movies"), # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -186,8 +190,8 @@ page_three <- tabPanel(
 
 summary_page <- tabPanel(
   "Summary",
+  headerPanel("Summary"),
   mainPanel(
-    h1("Summary"),
     h3("Budget/Renevues Analysis"),
     p("Throughout the assignment, our group noticed some fascinating things
     regarding the movies dataset that we have been working with. From one of
@@ -219,13 +223,13 @@ summary_page <- tabPanel(
       the true importance of movies and how their data can affect society.")
   )
 )
-
 # Pass each page to a multi-page layout (`navbarPage`)
 ui <- navbarPage(
-  "My Application", # application title
+  title = "Movies!",
   introduction,
   page_one,
   page_two,
   page_three,
-  summary_page
+  summary_page,
+  theme = "bootstrap.css"
 )
