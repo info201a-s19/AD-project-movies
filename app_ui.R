@@ -8,56 +8,56 @@ library("ggplot2") # Load ggplot2
 introduction <- tabPanel (
   "Project Overview",
   mainPanel(
-    tags$h1("Final Project: The Cinematic Universe"),
-    tags$p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
-    tags$p("5/22/2019"),
+    h1("Final Project: The Cinematic Universe"),
+    p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
+    p("5/22/2019"),
     
-    tags$p("Our synergy in our introductory group discussions brought
-           us to a shared interest in movies and their back-end processes
-           and facts. Thus, we decided to explore datasets regarding Movies.
-           Jody enjoys comedies. Lynette and Jeffrey revel in action movies,
-           especially MCU's Avengers. All in the while, Zhi appreciates
-           romance. There is more than beneath the eye of paying for a movie
-           stub at the theater as there are many components before and after
-           movie releases. Some pre-release factors consisting of budgeting,
-           timeline, and production planning enhance the quality and
-           enjoyability of the movie. While, a few post-factors incorporate
-           ratings, price, marketing, and theater distribution network - all
-           of which aim to drive long-term profitability and to attract a
-           global audience. We are motivated to analyze movie trends,
-           statistics, and logistics such as calculating the highest
-           revenue and budget by year, comparing runtime v.s. budget/revenue/etc,
-           comparing vote average v.s. vote count, and many more comparisions.
-           Moreover, we've analyzed the top 10 most voted movies to find the
-           budget, revenue, runtime, vote count, vote average, popularity, and
-           release year that are associated with them."),
+    p("Our synergy in our introductory group discussions brought
+       us to a shared interest in movies and their back-end processes
+       and facts. Thus, we decided to explore datasets regarding Movies.
+       Jody enjoys comedies. Lynette and Jeffrey revel in action movies,
+       especially MCU's Avengers. All in the while, Zhi appreciates
+       romance. There is more than beneath the eye of paying for a movie
+       stub at the theater as there are many components before and after
+       movie releases. Some pre-release factors consisting of budgeting,
+       timeline, and production planning enhance the quality and
+       enjoyability of the movie. While, a few post-factors incorporate
+       ratings, price, marketing, and theater distribution network - all
+       of which aim to drive long-term profitability and to attract a
+       global audience. We are motivated to analyze movie trends,
+       statistics, and logistics such as calculating the highest
+       revenue and budget by year, comparing runtime v.s. budget/revenue/etc,
+       comparing vote average v.s. vote count, and many more comparisions.
+       Moreover, we've analyzed the top 10 most voted movies to find the
+       budget, revenue, runtime, vote count, vote average, popularity, and
+       release year that are associated with them."),
     
-    tags$p("We began our research by viewing", a("Rounak Banik movie dataset",
-            href = "https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7"),
-           "who was interested in performing analysis and storytelling about
-           the movies and its components. From that, he built a revenue
-           forecasting model, determined success metrics, and crafted a
-           recommender system for movies. The data source originates from
-           an ensemble of data collected from TMDB and GroupLens. The Movie
-           Details, Credits and Keywords have been collected from the TMDB Open
-           API. Their API provides additional information on other movies,
-           actors and actresses, crew members, and TV shows. The main Movies
-           Metadata file contains information on 45,000 movies featured in
-           the Full MovieLens dataset. Features include posters, backdrops,
-           budget, revenue, release dates, languages, production countries
-           and companies. Additionally, we researched and utilized",
-           a("Juzer Shakir's movie dataset",
-             href = "https://www.kaggle.com/juzershakir/tmdb-movies-dataset"),
-           "who investigated datasets for 10K+ movies from
-           The Movie Database(TMDb). Shakir initially created his dataset
-           to discover which movies had the highest profits and hits.
-           But, overtime, he found that he wanted to learn more about the
-           characteristics of movies and what similarities they had. This
-           resulted in the current features that Shakir offers in his
-           dataset: id, imbd_id, popularity, budget, revenue, original_title,
-           cast, homepage, director, tagline, keywords, overview, runtime,
-           genres, production_companies, release_date, vote_count,
-           vote_average, release_year, budget_adj, and revenue_adj.")
+    p("We began our research by viewing", a("Rounak Banik's movie dataset",
+        href = "https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7"),
+       "who was interested in performing analysis and storytelling about
+       the movies and its components. From that, he built a revenue
+       forecasting model, determined success metrics, and crafted a
+       recommender system for movies. The data source originates from
+       an ensemble of data collected from TMDB and GroupLens. The Movie
+       Details, Credits and Keywords have been collected from the TMDB Open
+       API. Their API provides additional information on other movies,
+       actors and actresses, crew members, and TV shows. The main Movies
+       Metadata file contains information on 45,000 movies featured in
+       the Full MovieLens dataset. Features include posters, backdrops,
+       budget, revenue, release dates, languages, production countries
+       and companies. Additionally, we researched and utilized",
+       a("Juzer Shakir's movie dataset",
+         href = "https://www.kaggle.com/juzershakir/tmdb-movies-dataset"),
+       "who investigated datasets for 10K+ movies from
+       The Movie Database(TMDb). Shakir initially created his dataset
+       to discover which movies had the highest profits and hits.
+       But, overtime, he found that he wanted to learn more about the
+       characteristics of movies and what similarities they had. This
+       resulted in the current features that Shakir offers in his
+       dataset: id, imbd_id, popularity, budget, revenue, original_title,
+       cast, homepage, director, tagline, keywords, overview, runtime,
+       genres, production_companies, release_date, vote_count,
+       vote_average, release_year, budget_adj, and revenue_adj.")
   )
 )
 
