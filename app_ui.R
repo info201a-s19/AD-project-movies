@@ -17,7 +17,7 @@ introduction <- tabPanel(
     h2("Final Project: The Cinematic Universe"),
     p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
     p("6/5/2019"),
-    img(src = "./imgs/info201avengers.png", width = 720, height = 400),
+    img(src = "./imgs/info201avengers.png", width = 800, height = 300),
     p("Our synergy in our introductory group discussions brought
        us to a shared interest in movies and their back-end processes
        and facts. Thus, we decided to explore datasets regarding Movies.
@@ -247,7 +247,7 @@ summary_page <- tabPanel(
   headerPanel("Conclusion"),
 
   mainPanel(
-    img(src = "./imgs/summarytakeaways.png", width = 720, height = 400),
+    img(src = "./imgs/summarytakeaways.png", width = 800, height = 300),
     h3("Budget/Renevues Analysis"),
     p("Throughout the assignment, our group noticed some fascinating things
     regarding the movies dataset that we have been working with. From one of
@@ -279,6 +279,7 @@ summary_page <- tabPanel(
       budget, popularity for the movie wil increase as well.
       Revenue/budget typically have a positive correlation with each
       other."),
+    img(src = "./imgs/top10movies.png", width = 800, height = 300),
     h3("Top 10 Movies Takeaway"),
     p("Within the top 10 movies that were highly rated, it came to our
     realization that the pattern was a majority of the movies were made
