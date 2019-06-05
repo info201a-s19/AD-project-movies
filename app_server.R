@@ -5,6 +5,7 @@ library("dplyr") # Load dplyr
 library("tidyverse") # Load tidyverse
 library("shiny") # Load shiny
 library("tidyr") # Load tidyr
+library("rsconnect") # Load rsconnect
 options(scipen = 999)
 
 
