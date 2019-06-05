@@ -64,15 +64,28 @@ server <- function(input, output) {
     p
   })
   
+  top_10_df <- tmbd_df %>%
+    arrange(-revenue_adj) %>%
+    top_n(10, wt = revenue_adj) %>%
+    mutate(original_title = factor(original_title, original_title)) 
+  
   output$test <- renderPlot({
-  q <- ggplot(top_10_df, aes(x = original_title, y = yaxis_var_three)) +
+    y_axis_select <- switch(input$y_var_three,
+                            "Budget" = top_10_df[["budget_adj"]],
+                            "Revenue" = top_10_df[["revenue_adj"]],
+                            "Runtime" = top_10_df[["runtime"]],
+                            "Votes Count" = top_10_df[["vote_count"]],
+                            "Vote Average" = top_10_df[["vote_average"]],
+                            "Popularity" = top_10_df[["popularity"]],
+                            "Year" = top_10_df[["release_year"]])
+  q <- ggplot(top_10_df, aes(x = original_title, y = y_axis_select)) +
     geom_point(size = 3) +
-    geom_segment(aes(
-      x = original_title,
-      xend = original_title,
-      y = 0,
-      yend = yaxis_var_three
-    )) +
+    #geom_segment(aes(
+      #x = original_title,
+      #xend = original_title,
+      #y = 0,
+      #yend = yaxis_var_three
+    #)) +
     labs(
       title = "Top 10 Most Voted Movies",
       x = "Movie Titles",
