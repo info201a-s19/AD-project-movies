@@ -5,6 +5,61 @@ library("tidyr") # Loads tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
 
+introduction <- tabPanel (
+  "Project Overview",
+  mainPanel(
+    h1("Final Project: The Cinematic Universe"),
+    p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
+    p("5/22/2019"),
+    
+    p("Our synergy in our introductory group discussions brought
+       us to a shared interest in movies and their back-end processes
+       and facts. Thus, we decided to explore datasets regarding Movies.
+       Jody enjoys comedies. Lynette and Jeffrey revel in action movies,
+       especially MCU's Avengers. All in the while, Zhi appreciates
+       romance. There is more than beneath the eye of paying for a movie
+       stub at the theater as there are many components before and after
+       movie releases. Some pre-release factors consisting of budgeting,
+       timeline, and production planning enhance the quality and
+       enjoyability of the movie. While, a few post-factors incorporate
+       ratings, price, marketing, and theater distribution network - all
+       of which aim to drive long-term profitability and to attract a
+       global audience. We are motivated to analyze movie trends,
+       statistics, and logistics such as calculating the highest
+       revenue and budget by year, comparing runtime v.s. budget/revenue/etc,
+       comparing vote average v.s. vote count, and many more comparisions.
+       Moreover, we've analyzed the top 10 most voted movies to find the
+       budget, revenue, runtime, vote count, vote average, popularity, and
+       release year that are associated with them."),
+    
+    p("We began our research by viewing", a("Rounak Banik's movie dataset",
+        href = "https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7"),
+       "who was interested in performing analysis and storytelling about
+       the movies and its components. From that, he built a revenue
+       forecasting model, determined success metrics, and crafted a
+       recommender system for movies. The data source originates from
+       an ensemble of data collected from TMDB and GroupLens. The Movie
+       Details, Credits and Keywords have been collected from the TMDB Open
+       API. Their API provides additional information on other movies,
+       actors and actresses, crew members, and TV shows. The main Movies
+       Metadata file contains information on 45,000 movies featured in
+       the Full MovieLens dataset. Features include posters, backdrops,
+       budget, revenue, release dates, languages, production countries
+       and companies. Additionally, we researched and utilized",
+       a("Juzer Shakir's movie dataset",
+         href = "https://www.kaggle.com/juzershakir/tmdb-movies-dataset"),
+       "who investigated datasets for 10K+ movies from
+       The Movie Database(TMDb). Shakir initially created his dataset
+       to discover which movies had the highest profits and hits.
+       But, overtime, he found that he wanted to learn more about the
+       characteristics of movies and what similarities they had. This
+       resulted in the current features that Shakir offers in his
+       dataset: id, imbd_id, popularity, budget, revenue, original_title,
+       cast, homepage, director, tagline, keywords, overview, runtime,
+       genres, production_companies, release_date, vote_count,
+       vote_average, release_year, budget_adj, and revenue_adj.")
+  )
+)
 
 page_one <- tabPanel(
   "Revenue/Budget (Year)",
@@ -21,6 +76,15 @@ page_one <- tabPanel(
         choices = c("Revenue",
           "Budget"
         )
+      ),
+      selectInput(
+        "color_one",
+        label = "Color",
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
+                       "Gold" = "gold",
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       )
       # Checkbox for metro vs. rural coloring
     ),
@@ -64,9 +128,13 @@ page_two <- tabPanel(
         selected = "Revenue"
       ),
       selectInput(
-        "color_one",
+        "color_two",
         label = "Color",
-        choices = list("Blue" = "blue", "Green" = "green", "Red" = "red")
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
+                       "Gold" = "gold",
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       ),
       size_input <- sliderInput(
         "size_one",
@@ -103,9 +171,11 @@ page_three <- tabPanel(
       selectInput(
         "color_three",
         label = "Color",
-        choices = list("Purple" = "purple",
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
                        "Gold" = "gold",
-                       "Red" = "red")
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       )
     ),
     mainPanel(
@@ -117,15 +187,43 @@ page_three <- tabPanel(
 summary_page <- tabPanel(
   "Summary",
   mainPanel(
-    tags$h1("Conclusion of our Data"),
-    tags$p(" Our conclusion with this ejsokfjsdlkfsdkfj .....
-           ")
+    h1("Summary"),
+    h3("Budget/Renevues Analysis"),
+    p("Throughout the assignment, our group noticed some fascinating things
+    regarding the movies dataset that we have been working with. From one of
+    our main takeaways, there was an interesting increase within movie budgets
+    and revenues that have increased over the time in years. This was also
+    prelevant within the first interactive chart, which shows the actual
+    increase of the budgets and revenues over time. "),
+    h3("Revenue, Budget, and Popularity Conclusions"),
+    p("Our second conclusion consists of revenue, budget, and popularity and 
+      the correlation that is connected with these three variables. From the
+      aspect that revenue and popularity have a positive correlation, and also
+      so does the budget and popularity. All of these equates to the fact that
+      a more money that is spent or made upon a movie, would also have a
+      higher popularity, which gains more popularity."),
+    h3("Top 10 Movies Takeaway"),
+    p("Within the top 10 movies that were highly rated, it came to our
+    relization that majority of the movies were made fairly recently (within 
+    the past 20 years). Although the whole movie dataset actually contained
+    movies from 1900s until the 2000s from the aggregated database, we can
+    implicate that the modernization has increased over time as well as 
+    the technological advances that can track the amount of votes within the
+    movie industry. Also, the improvement of the movie dataset gained quality
+    over time, as the most recent data has a better record of voting."),
+    h3("Conclusion"),
+    p("Within the whole movie dataset, our team learned a lot about movies and
+      how they impact society. From the financial aspects such as budgeting, to
+      the impact of popularity and vote counts,movies contain a vital role
+      within social media and society. This dataset helped us understand
+      the true importance of movies and how their data can affect society.")
   )
 )
 
 # Pass each page to a multi-page layout (`navbarPage`)
 ui <- navbarPage(
   "My Application", # application title
+  introduction,
   page_one,
   page_two,
   page_three,

@@ -31,7 +31,8 @@ server <- function(input, output) {
     by_year <- ggplot(data = bud_rev_df) +
       geom_col(mapping = aes(x = year, y = y_axis_select, 
                              text = sprintf("Year: %s<br>$%sM", 
-                                            year, y_axis_select))) +
+                                            year, y_axis_select)), 
+               color = input$color_one) +
       coord_flip() +
       theme(
         axis.ticks = element_blank(),
@@ -79,7 +80,7 @@ server <- function(input, output) {
                                y_axis_select)), 
                  alpha = (1 / 10),
                  size = input$size_one,
-                 color = input$color_one
+                 color = input$color_two
                  ) +
       labs(
         title = title,
