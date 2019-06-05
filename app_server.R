@@ -1,12 +1,15 @@
-library("ggplot2")
-library("ggpubr")
-library("plotly")
-library("dplyr")
-library("tidyverse")
+library("ggplot2") # Load ggplot2
+library("ggpubr") # Load ggpubr
+library("plotly") # Load plotly
+library("dplyr") # Load dplyr
+library("tidyverse") # Load tidyverse
 library("shiny") # Load shiny
-library("tidyr") # Loads tidyr
+library("tidyr") # Load tidyr
 options(scipen = 999)
 
+
+# Create a server function that displays the first, second, and
+# third page visualizations with appropriate labels
 server <- function(input, output) {
   df <- read.csv("data/movies_metadata.csv", stringsAsFactors = FALSE)
   tmbd_df <- read.csv("data/tmdb_movies_data.csv", stringsAsFactors = FALSE)
@@ -18,6 +21,7 @@ server <- function(input, output) {
     summarize(max_budget = max(numeric_budget, na.rm = TRUE) / 1000000,
               max_rev = max(numeric_rev, na.rm = TRUE) / 1000000) %>%
     filter(str_count(year) == 4)
+  # Create the first page visualization
   output$my_chart <- renderPlotly({
     y_axis_select <- switch(input$rev_or_budget,
                             "Revenue" = bud_rev_df[["max_rev"]],
@@ -43,8 +47,7 @@ server <- function(input, output) {
       )
         return(ggplotly(by_year, tooltip = "text"))
   })
-  # Create a server function that display visualizations with labels.
-  # Creates a scatterplot
+  # Create the second page visualization
   output$scatter <- renderPlotly({
     y_axis_select <- switch(input$y_var_one,
                             "Budget" = tmbd_df[["budget_adj"]],
@@ -84,6 +87,7 @@ server <- function(input, output) {
     arrange(-revenue_adj) %>%
     top_n(10, wt = revenue_adj) %>%
     mutate(original_title = factor(original_title, original_title))
+  # Create the third page visualization
   output$lollipop <- renderPlotly({
     y_axis_select <- switch(input$y_var_three,
                             "Budget" = top_10_df[["budget_adj"]],
