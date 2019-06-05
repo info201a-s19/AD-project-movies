@@ -31,8 +31,6 @@ page_one <- tabPanel(
     )
   )
 )
-
-
 # Create x and y variables for page two
 yxaxis_var_one <- list(
   "Budget" = "budget_adj",
@@ -54,14 +52,16 @@ page_two <- tabPanel(
       selectInput(
         "x_var_one",
         label = "X Variable",
-        choices = yxaxis_var_one,
-        selected = "runtime"
+        choices = c("Budget", "Revenue", "Runtime", "Votes Count", 
+                    "Vote Average", "Popularity"),
+        selected = "Runtime"
       ),
       selectInput(
         "y_var_one",
         label = "Y Variable",
-        choices = yxaxis_var_one,
-        selected = "revenue"
+        choices = c("Budget", "Revenue", "Runtime", "Votes Count", 
+                    "Vote Average", "Popularity"),
+        selected = "Revenue"
       ),
       selectInput(
         "color_one",
@@ -75,7 +75,7 @@ page_two <- tabPanel(
     ),
     
     mainPanel(
-      plotOutput("scatter")
+      plotlyOutput("scatter")
     )
   )
 )
@@ -109,7 +109,7 @@ page_three <- tabPanel(
       )
     ),
     mainPanel(
-      plotOutput("test")
+      plotlyOutput("test")
     )
   )
 )

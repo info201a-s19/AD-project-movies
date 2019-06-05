@@ -1,4 +1,5 @@
 library("ggplot2")
+library("ggpubr")
 library("plotly")
 library("dplyr")
 library("tidyverse")
@@ -28,7 +29,9 @@ server <- function(input, output) {
                                  "Budget" = "Highest Budget Per Year")
     
     by_year <- ggplot(data = bud_rev_df) +
-      geom_col(mapping = aes(x = year, y = y_axis_select)) +
+      geom_col(mapping = aes(x = year, y = y_axis_select, 
+                             text = sprintf("Year: %s<br>$%sM", 
+                                            year, y_axis_select))) +
       coord_flip() +
       theme(
         axis.ticks = element_blank(),
@@ -40,28 +43,49 @@ server <- function(input, output) {
         title = chart_title_select,
         x = "Year", y = "($M)"
       )
-        return(ggplotly(by_year))              
+        return(ggplotly(by_year, tooltip = "text"))              
   })
   
   # Create a server function that display visualizations with labels.
   # Creates a scatterplot
-  output$scatter <- renderPlot({
-    xvar_name_one <- names(yxaxis_var_one)[yxaxis_var_one == input$x_var_one]
-    yvar_name_one <- names(yxaxis_var_one)[yxaxis_var_one == input$y_var_one]
+  output$scatter <- renderPlotly({
+    
+    y_axis_select <- switch(input$y_var_one,
+                            "Budget" = tmbd_df[["budget_adj"]],
+                            "Revenue" = tmbd_df[["revenue_adj"]],
+                            "Runtime" = tmbd_df[["runtime"]],
+                            "Votes Count" = tmbd_df[["vote_count"]],
+                            "Vote Average" = tmbd_df[["vote_average"]],
+                            "Popularity" = tmbd_df[["popularity"]]
+                            )
+    
+    x_axis_select <- switch(input$x_var_one,
+                            "Budget" = tmbd_df[["budget_adj"]],
+                            "Revenue" = tmbd_df[["revenue_adj"]],
+                            "Runtime" = tmbd_df[["runtime"]],
+                            "Votes Count" = tmbd_df[["vote_count"]],
+                            "Vote Average" = tmbd_df[["vote_average"]],
+                            "Popularity" = tmbd_df[["popularity"]]
+                            )
+    
+    xvar_name_one <- input$x_var_one
+    yvar_name_one <- input$y_var_one
     title <- paste0(xvar_name_one, " v.s. ", yvar_name_one)
     
     p <- ggplot(tmbd_df) +
-      geom_point(mapping = aes_string(x = input$x_var_one, y = input$y_var_one), alpha = (1 / 10),
+      geom_point(mapping = aes(x = x_axis_select, y = y_axis_select, 
+                               text = sprintf("%s: %s<br>%s: %s", xvar_name_one, 
+                                              x_axis_select, yvar_name_one, 
+                               y_axis_select)), 
+                 alpha = (1 / 10),
                  size = input$size_one,
                  color = input$color_one
                  ) +
-      #scale_x_continuous(breaks = seq(0, max(input$x_var_one), 20)) +
-      #scale_y_continuous(breaks = seq(0, max(input$y_var_one), 500000000)) +
       labs(
         title = title,
         x = xvar_name_one, y = yvar_name_one
       )
-    p
+    return(ggplotly(p, tooltip = "text"))
   })
   
   top_10_df <- tmbd_df %>%
@@ -69,7 +93,7 @@ server <- function(input, output) {
     top_n(10, wt = revenue_adj) %>%
     mutate(original_title = factor(original_title, original_title)) 
   
-  output$test <- renderPlot({
+  output$test <- renderPlotly({
     y_axis_select <- switch(input$y_var_three,
                             "Budget" = top_10_df[["budget_adj"]],
                             "Revenue" = top_10_df[["revenue_adj"]],
@@ -86,7 +110,9 @@ server <- function(input, output) {
                           "Vote Average" = "Vote Average",
                           "Popularity" = "Popularity",
                           "Year" = "Release Year")
-  q <- ggplot(top_10_df, aes(x = original_title, y = y_axis_select)) +
+  q <- ggplot(top_10_df, aes(x = original_title, y = y_axis_select, 
+                             text = sprintf("%s: %s", input$y_var_three, 
+                                            y_axis_select))) +
     geom_point(size = 3, color = input$color_three) +
     geom_segment(aes(
       x = original_title,
@@ -99,8 +125,8 @@ server <- function(input, output) {
       x = "Movie Titles",
       y = y_axis_name
     ) +
-    theme(axis.text.x = element_text(angle = 65, vjust = 0.5))
-  q
+    theme(axis.text.x = element_text(face = "bold", angle = 65, vjust = 0.5))
+  return(ggplotly(q, tooltip = "text"))
   })
 }
 
