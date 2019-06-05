@@ -5,16 +5,16 @@ library("tidyr") # Loads tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
 
-introduction <- tabPanel(   
+introduction <- tabPanel(
   "Home",
   headerPanel("Project Overview"),
 
-# Create introduction page with tabPanel and mainPanel. Additionally, 
-# add the purpose of the project, along with sources and an image.
+  # Create introduction page with tabPanel and mainPanel. Additionally,
+  # add the purpose of the project, along with sources and an image.
   mainPanel(
     h2("Final Project: The Cinematic Universe"),
     p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
-    p("5/22/2019"),
+    p("6/5/2019"),
     img(src = "./imgs/info201avengers.png", width = 720, height = 400),
     p("Our synergy in our introductory group discussions brought
        us to a shared interest in movies and their back-end processes
@@ -36,7 +36,7 @@ introduction <- tabPanel(
        budget, revenue, runtime, vote count, vote average, popularity, and
        release year that are associated with them."),
     p(
-      "We began our research by viewing", a("Rounak Banik's movie dataset",
+      "We began our research by viewing", a("Rounak Banik's movie dataset,",
         href = "https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7"
       ),
       "who was interested in performing analysis and storytelling about
@@ -51,7 +51,7 @@ introduction <- tabPanel(
        the Full MovieLens dataset. Features include posters, backdrops,
        budget, revenue, release dates, languages, production countries
        and companies. Additionally, we researched and utilized",
-      a("Juzer Shakir's movie dataset",
+      a("Juzer Shakir's movie dataset,",
         href = "https://www.kaggle.com/juzershakir/tmdb-movies-dataset"
       ),
       "who investigated datasets for 10K+ movies from
@@ -107,10 +107,9 @@ page_one <- tabPanel(
         The user is able to ulitilzed the widgets on the side to select
         whether they want to view revenue or budget as well as changing the
         color of the chart. Once selected, the user is able to hover over the
-        chart to view the specfic amount for that year. For example, the 
+        chart to view the specfic amount for that year. For example, the
         highest revenue in 2009 was $2787.965087 million, while the highest
-        budget in 2009 was $250 million."
-        )
+        budget in 2009 was $250 million.")
     )
   )
 )
@@ -169,7 +168,7 @@ page_two <- tabPanel(
     ),
     mainPanel(
       plotlyOutput("scatter"),
-      p("This scatterplot allows our user to make comparisons and see if 
+      p("This scatterplot allows our user to make comparisons and see if
         there are correlations within the movie dataset. By utilizing the
         widgets on the left, our user can select x and y variables such as
         budget, revenue, runtime, vote count, vote average, and popularity.
@@ -179,8 +178,7 @@ page_two <- tabPanel(
         variable, color to purple with size 3 points, the user will be able
         to tell that there is a low to medium correlation between runtime and
         revenue. Lastly, our user can hover over the points to receive specific
-        values."
-        )
+        values.")
     )
   )
 )
@@ -232,7 +230,7 @@ page_three <- tabPanel(
         view specific information regarding the chosen y variable. For example,
         by selecting revenue as the y variable and changing the color to red,
         it is easy to recognize that The Avengers has the lowest revenue
-        amongst this top 10. By hovering over it, I can see that its revenue 
+        amongst this top 10. By hovering over it, I can see that its revenue
         was $1,443,191,435.")
     )
   )
@@ -241,7 +239,7 @@ page_three <- tabPanel(
 
 # Create the summary conclusion page with tabPanel and mainPanel.
 # Additionally, add an image, descriptions, specific piece of data,
-# and a broad implication for the takeaways. 
+# and a broad implication for the takeaways.
 summary_page <- tabPanel(
   "Conclusion",
   headerPanel("Conclusion"),
@@ -252,25 +250,50 @@ summary_page <- tabPanel(
     p("Throughout the assignment, our group noticed some fascinating things
     regarding the movies dataset that we have been working with. From one of
     our main takeaways, there was an interesting increase within movie budgets
-    and revenues that have increased over the time in years. This was also
+    and revenues that have increased over the time in years. Additionally, its
     prelevant within the first interactive chart, which shows the actual
-    increase of the budgets and revenues over time. "),
+    increase of the budgets and revenues over time. Furthermore, a
+    noticeable pattern from the highest revenue per year chart is that by
+    the year 2001, revenues increased and remain $900 million and up! The
+    highest year was 2009 with around $2787 million. For highest budget by
+    year, from 2003 to 2017, the pattern have been a movie budget of $200+
+    million, with the highest being in the year 2011, which had a budget of
+    $380 million. The broader implication of this insight is that as the
+    quality of movies continue to grow, each year revenue and budget
+    increases (with some being more than others)."),
     h3("Revenue, Budget, and Popularity Conclusions"),
     p("Our second conclusion consists of revenue, budget, and popularity and
-the correlation that is connected with these three variables. From the
-      aspect that revenue and popularity have a positive correlation, and also
-      so does the budget and popularity. All of these equates to the fact that
-      a more money that is spent or made upon a movie, would also have a
-      higher popularity, which gains more popularity."),
+      the correlation that is connected with these three variables. The pattern
+      revealed by the scatterplot when setting revenue in the x variable and
+      popularity in the y variable, the plots group up together in the
+      beginning. But, as revenue increases, there was a slight continous
+      increase in popularity. This goes the same when switching from revenue
+      to budget. More specifically, with revenue and popularity, a high point
+      from the data appeared with a revenue of $1,392,445,893, which had a
+      popularity rating of around 32.9. When switching to budget and
+      popularity, a high point occurred with a budget of $137,999,939.3
+      and popularity rating of around 32.9. The broader implication of the
+      insight is that more often than not, with a higher revenue and
+      budget, popularity for the movie wil increase as well.
+      Revenue/budget typically have a positive correlation with each
+      other."),
     h3("Top 10 Movies Takeaway"),
     p("Within the top 10 movies that were highly rated, it came to our
-    relization that majority of the movies were made fairly recently (within
-    the past 20 years). Although the whole movie dataset actually contained
-    movies from 1900s until the 2000s from the aggregated database, we can
-    implicate that the modernization has increased over time as well as
-    the technological advances that can track the amount of votes within the
-    movie industry. Also, the improvement of the movie dataset gained quality
-    over time, as the most recent data has a better record of voting."),
+    realization that the pattern was a majority of the movies were made
+    fairly recently (within the past 20-25 years). Although the whole movie
+    dataset actually contained movies from 1900s until the 2010s from the
+    aggregated database, we can implicate that the modernization has
+    increased over time as well as the technological advances that can
+    track the amount of votes within the movie industry. Additionally, the
+    improvement of the movie dataset gained quality over time, as the most
+    recent data has a better record of voting. Our user can view these
+    insights by adjusting the y variable to year. In this case, the groupings
+    of the movies are close, with some being closer than others. Furthermore,
+    by hovering over the dots, our user can view the specific year the movie
+    released. For instance, movies such as Avatar released in 2009 and the
+    Avengers released in 2012. These two movies out of the top 10 further
+    proves the broader implication that as the year continues to grow, more
+    people are voting for movies that release near their time."),
     h3("Conclusion"),
     p("Within the whole movie dataset, our team learned a lot about movies and
       how they impact society. From the financial aspects such as budgeting, to
