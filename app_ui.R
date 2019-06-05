@@ -12,6 +12,8 @@ introduction <- tabPanel (
     p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
     p("5/22/2019"),
     
+    img(src = "./imgs/info201avengers.png", width = 720, height = 400),
+    
     p("Our synergy in our introductory group discussions brought
        us to a shared interest in movies and their back-end processes
        and facts. Thus, we decided to explore datasets regarding Movies.
@@ -179,6 +181,7 @@ page_three <- tabPanel(
       )
     ),
     mainPanel(
+      img(src = "./imgs/top10movies.png", width = 95, height = 95),
       plotlyOutput("test")
     )
   )
@@ -188,6 +191,10 @@ summary_page <- tabPanel(
   "Summary",
   mainPanel(
     h1("Summary"),
+    
+    img(src = "./imgs/summarytakeaways.png", width = 720, height = 400),
+    
+    
     h3("Budget/Renevues Analysis"),
     p("Throughout the assignment, our group noticed some fascinating things
     regarding the movies dataset that we have been working with. From one of
