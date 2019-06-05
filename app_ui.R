@@ -5,15 +5,15 @@ library("tidyr") # Loads tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
 
+# Create introduction page with tabPanel and mainPanel. Additionally, 
+# add the purpose of the project, along with sources and an image.
 introduction <- tabPanel(
   "Project Overview",
   mainPanel(
     h1("Final Project: The Cinematic Universe"),
     p("Jeffrey Zhao, Jody Wong, Lynette Li, Zhi Ye"),
     p("5/22/2019"),
-
     img(src = "./imgs/info201avengers.png", width = 720, height = 400),
-
     p("Our synergy in our introductory group discussions brought
        us to a shared interest in movies and their back-end processes
        and facts. Thus, we decided to explore datasets regarding Movies.
@@ -33,7 +33,6 @@ introduction <- tabPanel(
        Moreover, we've analyzed the top 10 most voted movies to find the
        budget, revenue, runtime, vote count, vote average, popularity, and
        release year that are associated with them."),
-
     p(
       "We began our research by viewing", a("Rounak Banik's movie dataset",
         href = "https://www.kaggle.com/rounakbanik/the-movies-dataset/version/7"
@@ -67,14 +66,15 @@ introduction <- tabPanel(
   )
 )
 
+
+# Define the first page content; uses tabPanel, sidebarLayout,
+# sidebarPanel, radioButtons, mainPanel, titlePanel, selectInput etc.
 page_one <- tabPanel(
   "Revenue/Budget (Year)",
   titlePanel("Revenue and Budget by Year"),
-
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
-
       # Radio buttons to adjust data based on race
       radioButtons(
         inputId = "rev_or_budget",
@@ -104,6 +104,8 @@ page_one <- tabPanel(
     )
   )
 )
+
+
 # Create x and y variables for page two
 yxaxis_var_one <- list(
   "Budget" = "budget_adj",
@@ -114,8 +116,8 @@ yxaxis_var_one <- list(
   "Popularity" = "popularity"
 )
 
-# Define the first page content; uses tabPanel, sidebarLayout,
-# sidebarPanel, selectInput, mainPanel, etc.
+# Define the second page content; uses tabPanel, sidebarLayout,
+# sidebarPanel, mainPanel, titlePanel, selectInput etc.
 page_two <- tabPanel(
   "Comparisons via Scatterplot", # label for the tab in the navbar
   titlePanel("Comparisons via Scatterplot"), # show with a displayed title
@@ -156,7 +158,6 @@ page_two <- tabPanel(
         label = "Size of Point", min = 1, max = 10, value = 2
       )
     ),
-
     mainPanel(
       plotlyOutput("scatter")
     )
@@ -165,7 +166,7 @@ page_two <- tabPanel(
 
 
 # Define the third page content; uses tabPanel, sidebarLayout,
-# sidebarPanel, selectInput, mainPanel, etc.
+# sidebarPanel, mainPanel, titlePanel, selectInput etc.
 page_three <- tabPanel(
   "Top 10 Most Voted Movies", # show with a displayed title
   titlePanel("Top 10 Most Voted Movies"), # show with a displayed title
@@ -204,14 +205,15 @@ page_three <- tabPanel(
   )
 )
 
+
+# Create the summary conclusion page with tabPanel and mainPanel.
+# Additionally, add an image, descriptions, specific piece of data,
+# and a broad implication for the takeaways. 
 summary_page <- tabPanel(
   "Summary",
   mainPanel(
     h1("Summary"),
-
     img(src = "./imgs/summarytakeaways.png", width = 720, height = 400),
-
-
     h3("Budget/Renevues Analysis"),
     p("Throughout the assignment, our group noticed some fascinating things
     regarding the movies dataset that we have been working with. From one of
@@ -244,9 +246,10 @@ the correlation that is connected with these three variables. From the
   )
 )
 
+
 # Pass each page to a multi-page layout (`navbarPage`)
 ui <- navbarPage(
-  "My Application", # application title
+  "Final Deliverable", # application title
   introduction,
   page_one,
   page_two,
