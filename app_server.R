@@ -124,4 +124,3 @@ server <- function(input, output) {
   return(ggplotly(q, tooltip = "text"))
   })
 }
-
