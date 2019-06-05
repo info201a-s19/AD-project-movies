@@ -4,6 +4,8 @@ library("dplyr") # Load dplyr
 library("tidyr") # Loads tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
+library("rsconnect") # Load rsconnect
+
 
 introduction <- tabPanel(
   "Home",
