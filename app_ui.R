@@ -7,7 +7,7 @@ library("ggplot2") # Load ggplot2
 
 
 page_one <- tabPanel(
-  "Jeff Zhao",
+  "Revenue/Budget (Year)",
   titlePanel("Revenue and Budget by Year"),
   
   # This content uses a sidebar layout
@@ -46,7 +46,7 @@ yxaxis_var_one <- list(
 # Define the first page content; uses tabPanel, sidebarLayout, 
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_two <- tabPanel(
-  "Zhi Ye", # label for the tab in the navbar
+  "Scatterplots", # label for the tab in the navbar
   titlePanel("Zhi Ye"), # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
@@ -83,7 +83,7 @@ page_two <- tabPanel(
 # Define the third page content; uses tabPanel, sidebarLayout, 
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_three <- tabPanel(
-  "Zhi", # show with a displayed title
+  "Top 10 Movies", # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(

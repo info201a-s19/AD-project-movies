@@ -78,18 +78,26 @@ server <- function(input, output) {
                             "Vote Average" = top_10_df[["vote_average"]],
                             "Popularity" = top_10_df[["popularity"]],
                             "Year" = top_10_df[["release_year"]])
+    y_axis_name <- switch(input$y_var_three,
+                          "Budget" = "($) Budget",
+                          "Revenue" = "($) Revenue",
+                          "Runtime" = "(min) Runtime",
+                          "Votes Count" = "# of Votes",
+                          "Vote Average" = "Vote Average",
+                          "Popularity" = "Popularity",
+                          "Year" = "Release Year")
   q <- ggplot(top_10_df, aes(x = original_title, y = y_axis_select)) +
     geom_point(size = 3) +
-    #geom_segment(aes(
-      #x = original_title,
-      #xend = original_title,
-      #y = 0,
-      #yend = yaxis_var_three
-    #)) +
+    geom_segment(aes(
+      x = original_title,
+      xend = original_title,
+      y = 0,
+      yend = y_axis_select
+    )) +
     labs(
       title = "Top 10 Most Voted Movies",
       x = "Movie Titles",
-      y = "Number of Votes"
+      y = y_axis_name
     ) +
     theme(axis.text.x = element_text(angle = 65, vjust = 0.5))
   q
