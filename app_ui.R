@@ -73,6 +73,7 @@ page_two <- tabPanel(
         label = "Size of point", min = 1, max = 10, value = 2
       )
     ),
+    
     mainPanel(
       plotOutput("scatter")
     )
@@ -97,7 +98,15 @@ page_three <- tabPanel(
         "Vote Average",
         "Popularity",
         "Year"),
-        selected = "budget_adj")
+        selected = "budget_adj"
+      ),
+      selectInput(
+        "color_three",
+        label = "Color",
+        choices = list("Purple" = "purple",
+                       "Gold" = "gold",
+                       "Red" = "red")
+      )
     ),
     mainPanel(
       plotOutput("test")
