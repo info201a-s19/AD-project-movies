@@ -1,4 +1,4 @@
-library("plotly")
+library("plotly") # Load plotly
 library("shiny") # Load shiny
 library("dplyr") # Load dplyr
 library("tidyr") # Loads tidyr
