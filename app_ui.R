@@ -21,6 +21,15 @@ page_one <- tabPanel(
         choices = c("Revenue",
           "Budget"
         )
+      ),
+      selectInput(
+        "color_one",
+        label = "Color",
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
+                       "Gold" = "gold",
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       )
       # Checkbox for metro vs. rural coloring
     ),
@@ -64,9 +73,13 @@ page_two <- tabPanel(
         selected = "revenue"
       ),
       selectInput(
-        "color_one",
+        "color_two",
         label = "Color",
-        choices = list("Blue" = "blue", "Green" = "green", "Red" = "red")
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
+                       "Gold" = "gold",
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       ),
       size_input <- sliderInput(
         "size_one",
@@ -103,9 +116,11 @@ page_three <- tabPanel(
       selectInput(
         "color_three",
         label = "Color",
-        choices = list("Purple" = "purple",
+        choices = list("Black" = "black",
+                       "Purple" = "purple",
                        "Gold" = "gold",
-                       "Red" = "red")
+                       "Red" = "red",
+                       "Dark Green" = "darkgreen")
       )
     ),
     mainPanel(
