@@ -84,7 +84,7 @@ server <- function(input, output) {
     arrange(-revenue_adj) %>%
     top_n(10, wt = revenue_adj) %>%
     mutate(original_title = factor(original_title, original_title))
-  output$test <- renderPlotly({
+  output$lollipop <- renderPlotly({
     y_axis_select <- switch(input$y_var_three,
                             "Budget" = top_10_df[["budget_adj"]],
                             "Revenue" = top_10_df[["revenue_adj"]],
