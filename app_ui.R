@@ -110,8 +110,8 @@ yxaxis_var_one <- list(
 # Define the first page content; uses tabPanel, sidebarLayout, 
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_two <- tabPanel(
-  "Scatterplots", # label for the tab in the navbar
-  titlePanel("Zhi Ye"), # show with a displayed title
+  "Comparisons via Scatterplot", # label for the tab in the navbar
+  titlePanel("Comparisons via Scatterplot"), # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -140,7 +140,7 @@ page_two <- tabPanel(
       ),
       size_input <- sliderInput(
         "size_one",
-        label = "Size of point", min = 1, max = 10, value = 2
+        label = "Size of Point", min = 1, max = 10, value = 2
       )
     ),
     
@@ -154,7 +154,8 @@ page_two <- tabPanel(
 # Define the third page content; uses tabPanel, sidebarLayout, 
 # sidebarPanel, selectInput, mainPanel, etc. 
 page_three <- tabPanel(
-  "Top 10 Movies", # show with a displayed title
+  "Top 10 Most Voted Movies", # show with a displayed title
+  titlePanel("Top 10 Most Voted Movies"), # show with a displayed title
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -181,8 +182,7 @@ page_three <- tabPanel(
       )
     ),
     mainPanel(
-      img(src = "./imgs/top10movies.png", width = 95, height = 95),
-      plotlyOutput("test")
+      plotlyOutput("lollipop")
     )
   )
 )
