@@ -246,9 +246,6 @@ the correlation that is connected with these three variables. From the
       the true importance of movies and how their data can affect society.")
   )
 )
-# Pass each page to a multi-page layout (`navbarPage`)
-ui <- navbarPage(
-  title = "Movies!",
 
 
 # Pass each page to a multi-page layout (`navbarPage`)
