@@ -1,6 +1,6 @@
 library("shiny") # Load shiny
 library("dplyr") # Load dplyr
-library("tidyr") # Loads tidyr
+library("tidyr") # Load tidyr
 library("leaflet") # Load leaflet
 library("ggplot2") # Load ggplot2
 
