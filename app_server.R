@@ -28,7 +28,7 @@ server <- function(input, output) {
                                  "Budget" = "Highest Budget Per Year")
     
     by_year <- ggplot(data = bud_rev_df) +
-      geom_col(mapping = aes(x = year, y = y_axis_select)) +
+      geom_col(mapping = aes(x = year, y = y_axis_select), color = input$color_one) +
       coord_flip() +
       theme(
         axis.ticks = element_blank(),
@@ -53,7 +53,7 @@ server <- function(input, output) {
     p <- ggplot(tmbd_df) +
       geom_point(mapping = aes_string(x = input$x_var_one, y = input$y_var_one), alpha = (1 / 10),
                  size = input$size_one,
-                 color = input$color_one
+                 color = input$color_two
                  ) +
       #scale_x_continuous(breaks = seq(0, max(input$x_var_one), 20)) +
       #scale_y_continuous(breaks = seq(0, max(input$y_var_one), 500000000)) +
